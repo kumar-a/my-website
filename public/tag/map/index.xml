@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Map | Abhishek Kumar</title>
+    <link>https://akumar.netlify.app/tag/map/</link>
+      <atom:link href="https://akumar.netlify.app/tag/map/index.xml" rel="self" type="application/rss+xml" />
+    <description>Map</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 Abhishek Kumar</copyright><lastBuildDate>Sun, 24 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://akumar.netlify.app/media/icon_hu63af8eaec43cac92558e0334cb2dff24_36198_512x512_fill_lanczos_center_3.png</url>
+      <title>Map</title>
+      <link>https://akumar.netlify.app/tag/map/</link>
+    </image>
+    
+    <item>
+      <title>Plotting rasters in R</title>
+      <link>https://akumar.netlify.app/post/plotting-rasters-in-r/</link>
+      <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://akumar.netlify.app/post/plotting-rasters-in-r/</guid>
+      <description>
+&lt;script src=&#34;https://akumar.netlify.app/post/plotting-rasters-in-r/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;load-required-packages&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;load required packages&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(raster)      # raster data
+library(rasterVis)   # raster data visualisation
+library(rgee)        # Google Earth Engine in R
+library(sf)          # spatial data handling
+library(tidyverse)   # general data wrangling and visualisation&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;getting-landcover-data-from-google-earth-engine&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Getting Landcover data from Google Earth Engine&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## load the package rgee
+library(rgee)
+
+## initialize google earth engine in R
+ee_Initialize(drive = T)
+
+## define a region of interest
+roi &amp;lt;- ee$Geometry$Rectangle(76.8100, 30.6676, 77.0010, 30.8084)
+
+## load and clip ESA WorldCover 2020 data
+landcover2020 &amp;lt;- ee$ImageCollection(&amp;quot;ESA/WorldCover/v100&amp;quot;)$
+  # select the first image
+  first()$
+  # clip to region of interest
+  clip(roi)
+
+## Move results from Earth Engine to Drive
+task_img &amp;lt;- ee_image_to_drive(
+  image = landcover2020,
+  folder = &amp;quot;rgee_backup&amp;quot;,
+  fileFormat = &amp;quot;GEO_TIFF&amp;quot;,
+  region = roi,
+  fileNamePrefix = &amp;quot;landcover_2020&amp;quot;
+)
+
+task_img$start()
+ee_monitoring(task_img)
+
+## Move results from Drive to local
+img &amp;lt;- ee_drive_to_local(task = task_img, dsn = &amp;quot;data/lc2020.tif&amp;quot;)
+
+## deauthorise google drive
+googledrive::drive_deauth()
+
+## remove all variables from environment
+rm(list = ls())&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;base-r&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;base R&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mwls_lc &amp;lt;- raster(&amp;quot;data/lc2020.tif&amp;quot;)
+plot(mwls_lc)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://akumar.netlify.app/post/plotting-rasters-in-r/index_files/figure-html/unnamed-chunk-2-1.svg&#34; width=&#34;90%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;img src=&#34;https://akumar.netlify.app/post/plotting-rasters-in-r/index_files/figure-html/unnamed-chunk-2-2.svg&#34; width=&#34;90%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lattice-levelplot&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;lattice levelplot&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(raster)
+library(rasterVis)
+
+## data from ESA WorldCover 2020 
+mwls_lc &amp;lt;- raster(&amp;quot;data/lc2020.tif&amp;quot;)
+
+levels(mwls_lc) &amp;lt;- data.frame(
+    ID = c(seq(10, 60, 10), 80),
+    landcover = c(&amp;quot;Trees&amp;quot;, &amp;quot;Shrubland&amp;quot;, &amp;quot;Grassland&amp;quot;, &amp;quot;Cropland&amp;quot;, &amp;quot;Built-up&amp;quot;, 
+             &amp;quot;Barren/Sparse \n Vegetation&amp;quot;, &amp;quot;Open water&amp;quot;)
+    )
+
+levelplot(mwls_lc, att=&amp;#39;landcover&amp;#39;,
+          col.regions = c(&amp;quot;#006400&amp;quot;, &amp;quot;#FFBB22&amp;quot;, &amp;quot;#FFFF4C&amp;quot;, &amp;quot;#F096FF&amp;quot;, &amp;quot;#FA0000&amp;quot;, 
+                          &amp;quot;#B4B4B4&amp;quot;, &amp;quot;#0064C8&amp;quot;),
+          colorkey = list(height = 1, labels = list(cex = 1.2)))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://akumar.netlify.app/post/plotting-rasters-in-r/index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;90%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ggplot&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;ggplot&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
+## data from ESA WorldCover 2020 
+mwls_lc &amp;lt;- raster(&amp;quot;data/lc2020.tif&amp;quot;)
+
+## a function to convert raster to dataframe
+rasterdf &amp;lt;- function(x, aggregate = 1){
+    resampleFactor &amp;lt;- aggregate
+    inputRaster &amp;lt;- x    
+    inCols &amp;lt;- ncol(inputRaster)
+    inRows &amp;lt;- nrow(inputRaster)
+    
+    # Compute numbers of columns and rows in the new raster for mapping
+    resampledRaster &amp;lt;- raster(ncol = (inCols / resampleFactor),
+                              nrow = (inRows / resampleFactor))
+    
+    # Match to the extent of the original raster
+    extent(resampledRaster) &amp;lt;- extent(inputRaster)
+   
+    # Resample data on the new raster
+    y &amp;lt;- resample(inputRaster, resampledRaster, method=&amp;#39;ngb&amp;#39;)
+   
+    # Extract cell coordinates  
+    coords &amp;lt;- xyFromCell(y, seq_len(ncell(y)))
+    dat &amp;lt;- stack(as.data.frame(getValues(y)))
+    
+    # Add names - &amp;#39;value&amp;#39; for data, &amp;#39;variable&amp;#39; to indicate different raster layers
+    # in a stack
+    names(dat) &amp;lt;- c(&amp;#39;value&amp;#39;, &amp;#39;variable&amp;#39;)
+    dat &amp;lt;- cbind(coords, dat)
+    dat
+}
+
+## convert raster to data frame
+mwls_df &amp;lt;- rasterdf(mwls_lc)
+
+## prepare legend
+LCcodes &amp;lt;- c(seq(10, 90, 10), 95, 100)
+LCnames &amp;lt;- c(&amp;quot;Trees&amp;quot;, &amp;quot;Shrubland&amp;quot;, &amp;quot;Grassland&amp;quot;, &amp;quot;Cropland&amp;quot;, &amp;quot;Built-up&amp;quot;, 
+             &amp;quot;Barren/Sparse Vegetation&amp;quot;, &amp;quot;Snow and Ice&amp;quot;, &amp;quot;Open water&amp;quot;,
+             &amp;quot;Herbaceous wetland&amp;quot;, &amp;quot;Mangroves&amp;quot;, &amp;quot;Moss and lichen&amp;quot;)
+LCcolors &amp;lt;- attr(mwls_lc, &amp;quot;legend&amp;quot;)@colortable[LCcodes + 1]
+names(LCcolors) &amp;lt;- as.character(LCcodes)
+
+## plot the map
+ggplot(data = mwls_df) +
+  geom_raster(aes(x = x, y = y, fill = as.character(value))) + 
+  scale_fill_manual(name = &amp;quot;Land cover&amp;quot;,
+                    values = LCcolors[-c(7, 9:11)],
+                    labels = LCnames[-c(7, 9:11)],
+                    na.translate = FALSE) +
+  coord_sf(expand = F) +
+  theme(axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        panel.background = element_rect(fill = &amp;quot;white&amp;quot;, color = &amp;quot;black&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://akumar.netlify.app/post/plotting-rasters-in-r/index_files/figure-html/lc-1.svg&#34; width=&#34;90%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
+## remove all variables from the environment
+rm(list = ls())&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

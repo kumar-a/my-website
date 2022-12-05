@@ -1,0 +1,85 @@
+---
+title: Meta-analytic models in Ecology
+author: Abhishek Kumar
+date: '2022-02-05'
+slug: meta-analytic-models-in-ecology
+categories:
+  - R
+  - meta-analysis
+tags:
+  - R
+  - Meta-analysis
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2022-02-05T00:37:03+05:30'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+
+<p>The overall aim of meta-analyses is to combine the effects or observations from different studies. There are three main types of meta-analytic models i.e., fixed-effect model (FEM), random-effects model (REM), and multilevel model (MLM), which are commonly used to compute the overall effect estimate in meta-analysis. Multilevel meta-analytic models account for non-independence due to studies, species and phylogenetic relatedness between species, which is common for ecological meta-analyses.</p>
+<div id="fixed-effects-model" class="section level2">
+<h2>Fixed-effects model</h2>
+<p>The most basic fixed-effect or common-effect model can be mathematically expressed as Equation <a href="#eq:mod1">(1)</a></p>
+<p><span class="math display" id="eq:mod1">\[\begin{equation}
+y_i = \mu + e_i; \quad 
+\textbf{e} \sim \mathcal{N}(0, \textbf{V})
+\tag{1}
+\end{equation}\]</span></p>
+<p>where, <span class="math inline">\(y_i\)</span> is the effect size for the <span class="math inline">\(i^{th}\)</span> study (with <span class="math inline">\(i = 1, \ldots, N_{studies}\)</span>) with corresponding sampling variance <span class="math inline">\(v_i\)</span>, <span class="math inline">\(\mu\)</span> is the overall meta-analytic mean, <span class="math inline">\(e_i\)</span> is the sampling error for the <span class="math inline">\(i^{th}\)</span> study, <span class="math inline">\(\textbf{e}\)</span> is a <span class="math inline">\(1 \times N_{studies}\)</span> column vector with the <span class="math inline">\(e_i\)</span> values (which are assumed to be normally distributed with mean <span class="math inline">\(0\)</span> and variance <span class="math inline">\(v_i\)</span>), <span class="math inline">\(0\)</span> is a column vector of zeros and <span class="math inline">\(\textbf{V}\)</span> is an <span class="math inline">\(N_{studies} \times N_{studies}\)</span> matrix with the <span class="math inline">\(v_i\)</span> values along the diagonal. However, this model is overly simplistic as it assumes homogeneity between studies which is far from the reality, at least for ecological studies.</p>
+</div>
+<div id="random-effects-model" class="section level2">
+<h2>Random-effects model</h2>
+<p>In contrary to the fixed effect model, the assumptions of random-effects model are more realistic as it considers between-study heterogeneity. This model assumes that there is not only one actual effect size but a distribution of true effect sizes. According to this model, the observed effect size <span class="math inline">\(y_i\)</span> deviates from the mean true effect size <span class="math inline">\(\mu\)</span> for a single study <span class="math inline">\(i\)</span> (with <span class="math inline">\(i = 1, \ldots , N_{studies}\)</span>) by two error terms <span class="math inline">\(u_i\)</span> (between-study heterogeneity) and <span class="math inline">\(e_i\)</span> (sampling error). Thus, the random effects model can be expressed as Equation <a href="#eq:mod2">(2)</a></p>
+<p><span class="math display" id="eq:mod2">\[\begin{equation}
+y_i = \mu + u_i + e_i; \quad 
+\textbf{u} \sim \mathcal{N}(0, \sigma_u^2 \textbf{I}_u)
+\tag{2}
+\end{equation}\]</span></p>
+<p>where, <span class="math inline">\(u_i\)</span> is the random effect corresponding to the <span class="math inline">\(i^{th}\)</span> estimate, <span class="math inline">\(\textbf{u}\)</span> is a <span class="math inline">\(1 \times N_{studies}\)</span> column vector with the <span class="math inline">\(u_i\)</span> values (which are assumed to be normally distributed with mean <span class="math inline">\(0\)</span> and variance <span class="math inline">\(\sigma_u^2\)</span>) and <span class="math inline">\(\textbf{I}_u\)</span> is an <span class="math inline">\(N_{studies} \times N_{studies}\)</span> identity matrix.</p>
+<p>Although the random-effects model is commonly used in ecology, it did not take into consideration the non-independence among effect sizes. The non-independence can arise when the effect sizes are shared by studies or species (i.e., multiple effect sizes from the same study or species). Further, phylogenetic relatedness among species can also introduce non-independence among the effect size estimates. This issue of non-independence can be addressed by using a multilevel (hierarchical) meta-analytic model, which considers a random effect at each level of variability in effect sizes. Among the several factor for non-independence of effect sizes, the dependence due to studies, species and phylogenetic relatedness among species are common in ecology.</p>
+</div>
+<div id="random-effects-model-at-study-level" class="section level2">
+<h2>Random-effects model at study level</h2>
+<p>When a study provides more than one effect sizes, we have random effects at effect size (within studies) and study levels (between-study). To consider such non-independence due to studies, a multilevel model can be mathematically expressed as Equation <a href="#eq:mod3">(3)</a></p>
+<p><span class="math display" id="eq:mod3">\[\begin{equation}
+y_{ij} = \mu + u_{ij} + s_i + e_{ij}; \quad 
+\textbf{s} \sim \mathcal{N}(0, \sigma_s^2 \textbf{I}_s) 
+\tag{3}
+\end{equation}\]</span></p>
+<p>where, <span class="math inline">\(y_{ij}\)</span> denotes the <span class="math inline">\(j^{th}\)</span> effect in the <span class="math inline">\(i^{th}\)</span> study (with <span class="math inline">\(j = 1, \ldots, N_i\)</span>, where <span class="math inline">\(N_i\)</span> is the number of effect sizes reported in the <span class="math inline">\(i^{th}\)</span> study), <span class="math inline">\(v_{ij}\)</span> are the corresponding sampling variances, and <span class="math inline">\(N_{total} = \sum_{i = 1}^{N_{studies}} N_i\)</span> represents the total number of the effect sizes, <span class="math inline">\(u_{ij}\)</span> is a random effect corresponding to the <span class="math inline">\(j^{th}\)</span> effect size in the <span class="math inline">\(i^{th}\)</span> study, <span class="math inline">\(s_i\)</span> is a random effect at the study level, <span class="math inline">\(\textbf{u}\)</span> is now a <span class="math inline">\(1 \times N_{total}\)</span> column vector with the <span class="math inline">\(u_{ij}\)</span> values, <span class="math inline">\(\textbf{s}\)</span> is a <span class="math inline">\(1 \times N_{studies}\)</span> column vector with the <span class="math inline">\(s_i\)</span> values (which are assumed to be normally distributed with mean <span class="math inline">\(0\)</span> and variance <span class="math inline">\(\sigma_s^2\)</span>), and <span class="math inline">\(\textbf{I}_u\)</span> and <span class="math inline">\(\textbf{I}_s\)</span> are <span class="math inline">\(N_{total} \times N_{total}\)</span> and <span class="math inline">\(N_{studies} \times N_{studies}\)</span> identity matrices, respectively.</p>
+</div>
+<div id="random-effects-model-at-species-level" class="section level2">
+<h2>Random-effects model at species level</h2>
+<p>However, the above model in Equation <a href="#eq:mod3">(3)</a> did not considers non-independence due to species, which is prevalent in ecology and evolution. If effect sizes belong to different species, we can denote <span class="math inline">\(y_{ijk}\)</span> as the <span class="math inline">\(j^{th}\)</span> effect in the <span class="math inline">\(i^{th}\)</span> study for the <span class="math inline">\(k^{th}\)</span> species (with <span class="math inline">\(k = 1, \ldots, N_{species}\)</span>). Then the multilevel model can include random effects at species level as expressed in Equation <a href="#eq:mod4">(4)</a></p>
+<p><span class="math display" id="eq:mod4">\[\begin{equation}
+y_{ijk} = \mu + u_{ij} + s_i + n_k + e_{ij}; \quad 
+\textbf{n} \sim \mathcal{N}(0, \sigma_n^2 \textbf{I}_n)
+\tag{4}
+\end{equation}\]</span></p>
+<p>where, <span class="math inline">\(n_k\)</span> is a species-specific random effect, <span class="math inline">\(\textbf{n}\)</span> is a <span class="math inline">\(1 \times N_{species}\)</span> column vector with the <span class="math inline">\(n_k\)</span> values (which are assumed to be normally distributed with mean <span class="math inline">\(0\)</span> and between-species variance <span class="math inline">\(\sigma_n^2\)</span>) and <span class="math inline">\(\textbf{I}_n\)</span> has dimensions <span class="math inline">\(N_{species} × N_{species}\)</span>. In Equation <a href="#eq:mod4">(4)</a>, <span class="math inline">\(n_k\)</span> is considered as crossed random effect instead of nested random effect.</p>
+</div>
+<div id="random-effects-model-at-phylogenetic-relatedness-level" class="section level2">
+<h2>Random-effects model at phylogenetic relatedness level</h2>
+<p>To account for non-independence due to phylogenetic relatedness, the multilevel model can be extended as Equation <a href="#eq:mod5">(5)</a></p>
+<p><span class="math display" id="eq:mod5">\[\begin{equation}
+y_{ijk} = \mu + u_{ij} + s_i + n_k + p_k + e_{ij}; \quad
+\textbf{p} \sim \mathcal{N}(0, \sigma_p^2 \textbf{A}) 
+\tag{5}
+\end{equation}\]</span></p>
+<p>where, <span class="math inline">\(p_k\)</span> denotes the phylogenetic random effect for the <span class="math inline">\(k^{th}\)</span> species,
+<span class="math inline">\(\textbf{p}\)</span> is a <span class="math inline">\(1 \times N_{species}\)</span> column vector with the <span class="math inline">\(p_k\)</span> values (which are assumed to follow a multivariate normal distribution with mean <span class="math inline">\(0\)</span> and variance–covariance matrix <span class="math inline">\(\sigma_p^2 \textbf{A}\)</span>, where <span class="math inline">\(\sigma_p^2\)</span> denotes between-species variance due to the phylogeny, and <span class="math inline">\(\textbf{A}\)</span> is the <span class="math inline">\(N_{species} \times N_{species}\)</span> phylogenetic correlation matrix).</p>
+<p>The model in Equation <a href="#eq:mod5">(5)</a> includes both non-phylogenetic (<span class="math inline">\(n_k\)</span>) and phylogenetic(<span class="math inline">\(p_k\)</span>) random effect due to species. Concerning the potential bias in estimated variances, we can simplify this model by removing the non-phylogenetic random effects as represented in Equation <a href="#eq:mod6">(6)</a></p>
+<p><span class="math display" id="eq:mod6">\[\begin{equation}
+y_{ijk} = \mu + u_{ij} + s_i + p_k + e_{ij}; \quad
+\textbf{p} \sim \mathcal{N}(0, \sigma_p^2 \textbf{A})
+\tag{6}
+\end{equation}\]</span></p>
+</div>

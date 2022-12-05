@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Plant Ecology | Abhishek Kumar</title>
+    <link>https://akumar.netlify.app/tag/plant-ecology/</link>
+      <atom:link href="https://akumar.netlify.app/tag/plant-ecology/index.xml" rel="self" type="application/rss+xml" />
+    <description>Plant Ecology</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 Abhishek Kumar</copyright><lastBuildDate>Mon, 14 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://akumar.netlify.app/media/icon_hu63af8eaec43cac92558e0334cb2dff24_36198_512x512_fill_lanczos_center_3.png</url>
+      <title>Plant Ecology</title>
+      <link>https://akumar.netlify.app/tag/plant-ecology/</link>
+    </image>
+    
+    <item>
+      <title>Plant ecology in Indian Siwalik range: a systematic map and its bibliometric analysis</title>
+      <link>https://akumar.netlify.app/publication/abhishek-2022-troe/</link>
+      <pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://akumar.netlify.app/publication/abhishek-2022-troe/</guid>
+      <description>
+&lt;script src=&#34;https://akumar.netlify.app/publication/abhishek-2022-troe/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to copy or import the publication metadata (citation) into reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Plant response to climate change: Herbarium can act as a tool for future research on plant-climate interactions</title>
+      <link>https://akumar.netlify.app/talk/plant-response-to-climate-change-herbarium-can-act-as-a-tool-for-future-research-on-plant-climate-interactions/</link>
+      <pubDate>Sun, 23 Feb 2020 10:00:00 +0000</pubDate>
+      <guid>https://akumar.netlify.app/talk/plant-response-to-climate-change-herbarium-can-act-as-a-tool-for-future-research-on-plant-climate-interactions/</guid>
+      <description>&lt;p&gt;Abhishek Kumar presented a research poster titled &lt;strong&gt;Plant response to Climate change: Herbarium can act as a tool for future research on plant-climate interactions&lt;/strong&gt; at Second &lt;em&gt;National Conference on Climate Change: Agriculture, Biodiversity and Human Health&lt;/em&gt; organised by the Clean and Green Environmental Society (CGES), Lucknow and CSIR-National Botanical Research Institute (NBRI), Lucknow on February 22-23, 2020 held at CSIR-NBRI, Lucknow. This research poster has been awarded &lt;strong&gt;Third Prize&lt;/strong&gt;. In this study, the authors have evaluated the temporal changes in leaf morphological traits using herbarium specimens. We found temporal changes mainly in 3 parameters of leaf morphological traits (i.e. leaf area, leaf length and leaf shape) of the grasses except leaf width. The increase in leaf area was correlated with the average atmospheric  concentration of the year in which a particular species was collected. In conclusion, we found that plants are already responding to changing environmental conditions that evidently observed in the herbarium specimens. Therefore, herbarium can prove to be a good tool to understand plant-climate interactions in future studies. Abhishek Kumar thanked his colleagues and co-authors for support and constructive suggestions during the research work.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Plant distributions in Siwalliks of North-West India</title>
+      <link>https://akumar.netlify.app/project/plant-distribution/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://akumar.netlify.app/project/plant-distribution/</guid>
+      <description>&lt;p&gt;Plant distributions are governed by several ecological and climatic factors. On going climate change is expected to alter the plant distributions, therefore this project aims to investigate the evidences of alteration in plant distributions.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

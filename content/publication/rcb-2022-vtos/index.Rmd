@@ -1,0 +1,85 @@
+---
+title: "Nutrient component analyses of selected wild edible plants from Hamirpur district of Himachal Pradesh, India: an evaluation for future food"
+
+# Authors
+# If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here 
+# and it will be replaced with their full name and linked to their profile.
+authors:
+- Ram Chand Bhatti
+- Rupinder Kaur
+- admin
+- Viney Kumar
+- Siril Singh
+- Pardeep Kumar
+- Sheenu Sharma
+- Chongtham Nirmala
+- Anand Narain Singh
+
+# Author notes (optional)
+author_notes: ""
+
+date: "2022-01-21"
+doi: "10.1007/s42535-021-00336-5"
+
+# Schedule page publish date (NOT publication's date).
+publishDate: "2022-01"
+
+# Publication type.
+# Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
+# 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
+# 7 = Thesis; 8 = Patent
+publication_types: ["2"]
+
+# Publication name and optional abbreviated publication name.
+publication: "*Vegetos, 35*(2), 545--550"
+publication_short: ""
+
+abstract: Many wild edible plants have been traditionally used as foods and medicines among various ethnic groups. However, information about the nutrient components of these plants has yet to be scientifically tested. Therefore, this study evaluated the nutrient components of selected wild edible plants. It was found that nutrient content considerably varied among all the selected species. *Digera muricata* has the richest protein content among the selected plant species, and *Dioscorea bulbifera* has the highest fat content. Similarly, *Spondias pinnata* and *Boerhavia diffusa* were rich sources of vitamin-C and vitamin-E, respectively. *D. muricata* was found to be promising future food based on overall nutrient composition. These plants can offer a basis for developing dietary supplements and nutraceuticals on a commercial scale. Thus, scientific evaluation and validation of such underutilised plants and their products may prove an alternative future food.
+
+# Summary. An optional shortened abstract.
+summary: ""
+tags:
+- Ethnobiology
+- Ethnobotany 
+
+# Display this page in the Featured widget?
+featured: false
+
+# Custom links (uncomment lines below)
+links:
+- name: "SpringerLink"
+  url: "https://link.springer.com/article/10.1007/s42535-021-00336-5"
+url_pdf: "https://link.springer.com/content/pdf/10.1007/s42535-021-00336-5.pdf"
+url_code: ''
+url_dataset: ''
+url_poster: ''
+url_project: ''
+url_slides: ''
+url_source: ''
+url_video: ''
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder. 
+image:
+  caption: '' 
+  focal_point: ""
+  preview_only: false
+
+# Associated Projects (optional).
+#   Associate this publication with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `internal-project` references `content/project/internal-project/index.md`.
+#   Otherwise, set `projects: []`.
+projects: []
+
+# Slides (optional).
+#   Associate this publication with Markdown slides.
+#   Simply enter your slide deck's filename without extension.
+#   E.g. `slides: "example"` references `content/slides/example/index.md`.
+#   Otherwise, set `slides: ""`.
+slides: ""
+---
+
+{{% callout note %}}
+Click the *Cite* button above to copy or import the citation into reference management software.
+{{% /callout %}}

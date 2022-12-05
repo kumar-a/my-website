@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Plant Diversity | Abhishek Kumar</title>
+    <link>https://akumar.netlify.app/tag/plant-diversity/</link>
+      <atom:link href="https://akumar.netlify.app/tag/plant-diversity/index.xml" rel="self" type="application/rss+xml" />
+    <description>Plant Diversity</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 Abhishek Kumar</copyright><lastBuildDate>Sat, 01 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://akumar.netlify.app/media/icon_hu63af8eaec43cac92558e0334cb2dff24_36198_512x512_fill_lanczos_center_3.png</url>
+      <title>Plant Diversity</title>
+      <link>https://akumar.netlify.app/tag/plant-diversity/</link>
+    </image>
+    
+    <item>
+      <title>Plant diversity development under planted woody species on coal mine spoil in a dry tropical environment, India: A case study</title>
+      <link>https://akumar.netlify.app/publication/pardeep-2020-jee/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://akumar.netlify.app/publication/pardeep-2020-jee/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

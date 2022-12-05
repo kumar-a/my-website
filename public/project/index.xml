@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | Abhishek Kumar</title>
+    <link>https://akumar.netlify.app/project/</link>
+      <atom:link href="https://akumar.netlify.app/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 Abhishek Kumar</copyright><lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://akumar.netlify.app/media/icon_hu63af8eaec43cac92558e0334cb2dff24_36198_512x512_fill_lanczos_center_3.png</url>
+      <title>Projects</title>
+      <link>https://akumar.netlify.app/project/</link>
+    </image>
+    
+    <item>
+      <title>Ecosystem Structure and Functions in Indian Siwalliks</title>
+      <link>https://akumar.netlify.app/project/siwaliks/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://akumar.netlify.app/project/siwaliks/</guid>
+      <description>&lt;p&gt;Siwaliks is the youngest and southernmost foot hills of Himalayas. These youngest mountain ranges are considered as one of the most degraded ecosystems of the Himalayan landscape. Climate change, landslides, human encroachment, urbanisation and industrilisation are possessing serious threats to the ecosystem structure and functions in this region. This project aims to investigate the responses of ecosystem structure and functions to the climate change.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Plant distributions in Siwalliks of North-West India</title>
+      <link>https://akumar.netlify.app/project/plant-distribution/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://akumar.netlify.app/project/plant-distribution/</guid>
+      <description>&lt;p&gt;Plant distributions are governed by several ecological and climatic factors. On going climate change is expected to alter the plant distributions, therefore this project aims to investigate the evidences of alteration in plant distributions.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

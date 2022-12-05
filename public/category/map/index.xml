@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>map | Abhishek Kumar</title>
+    <link>https://akumar.netlify.app/category/map/</link>
+      <atom:link href="https://akumar.netlify.app/category/map/index.xml" rel="self" type="application/rss+xml" />
+    <description>map</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 Abhishek Kumar</copyright><lastBuildDate>Tue, 09 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://akumar.netlify.app/media/icon_hu63af8eaec43cac92558e0334cb2dff24_36198_512x512_fill_lanczos_center_3.png</url>
+      <title>map</title>
+      <link>https://akumar.netlify.app/category/map/</link>
+    </image>
+    
+    <item>
+      <title>Making maps in R</title>
+      <link>https://akumar.netlify.app/post/making-maps-in-r/</link>
+      <pubDate>Tue, 09 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://akumar.netlify.app/post/making-maps-in-r/</guid>
+      <description>
+&lt;script src=&#34;https://akumar.netlify.app/post/making-maps-in-r/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;load-the-required-packages&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;load the required packages&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)       # general data wrangling
+library(raster)      # raster data
+library(sf)          # spatial data handling
+library(tmap)        # thematic mapping&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;download-and-prepare-the-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;download and prepare the data&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## extract boundaries and data from OpenStreetMap
+library(osmdata)
+
+## define a bounding box for area of interest
+osm_bbox &amp;lt;- c(76.8079, 30.6636, 77.5173, 31.0125) # xmin, ymin, xmax, ymax
+
+## extract boundary of the protected area as sf from OpenStreetMap (osm)
+protected_areas &amp;lt;- opq(osm_bbox) |&amp;gt;
+  add_osm_feature(key = &amp;quot;boundary&amp;quot;, value = &amp;quot;protected_area&amp;quot;, value_exact = F) |&amp;gt;
+  osmdata_sf()
+
+## rename protected areas to short names and save to local file as gpkg
+protected_areas$osm_polygons |&amp;gt; select(name, geometry) |&amp;gt;
+  mutate(short_name = c(&amp;quot;CL&amp;quot;, &amp;quot;CD&amp;quot;, &amp;quot;MH&amp;quot;, &amp;quot;BS&amp;quot;, &amp;quot;SL&amp;quot;)) |&amp;gt;
+  st_write(&amp;quot;data/protected_areas.gpkg&amp;quot;)
+
+## extract rivers / streams (waterways) from osm as sf
+waterways &amp;lt;- opq(osm_bbox) |&amp;gt; add_osm_feature(key = &amp;quot;waterway&amp;quot;) |&amp;gt; 
+  osmdata_sf()
+
+## save waterways to local file as gpkg
+waterways$osm_lines |&amp;gt; select(name, waterway, geometry) |&amp;gt; 
+  st_write(&amp;quot;data/waterways.gpkg&amp;quot;)
+
+## extract roadways (highway) major roads from osm as sf
+highways &amp;lt;- opq(osm_bbox) |&amp;gt; add_osm_feature(key = &amp;quot;highway&amp;quot;) |&amp;gt; 
+  osmdata_sf()
+
+## save roadways to local file as gpkg
+highways$osm_lines |&amp;gt; select(name, highway, geometry) |&amp;gt; 
+  st_write(&amp;quot;data/highways.gpkg&amp;quot;)
+
+## load, merge, and crop pre-downloaded SRTM 30 m elevation data 
+elev &amp;lt;- raster(&amp;quot;D:/spatial-data/dem/n30_e076_1arc_v3.tif&amp;quot;) |&amp;gt;
+    merge(raster(&amp;quot;D:/spatial-data/dem/n30_e077_1arc_v3.tif&amp;quot;)) |&amp;gt; 
+    merge(raster(&amp;quot;D:/spatial-data/dem/n31_e076_1arc_v3.tif&amp;quot;)) |&amp;gt; 
+    merge(raster(&amp;quot;D:/spatial-data/dem/n31_e077_1arc_v3.tif&amp;quot;)) |&amp;gt; 
+    crop(extent(76.8079, 77.5173, 30.6636, 31.0125))
+
+## prepare and save hillshade
+hillShade(
+    # extract slope from elevation
+    slope = terrain(elev, opt= &amp;quot;slope&amp;quot;),
+    
+    # extract aspect from elevation
+    aspect = terrain(elev, opt= &amp;quot;aspect&amp;quot;), 
+    
+    # 45 altitude angle and 315 azimuth angle
+    angle = 45, direction = 315) |&amp;gt; 
+    writeRaster(&amp;quot;data/hill_shade.tif&amp;quot;)
+
+## remove all files from environment
+rm(list = ls())&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;load-the-prepared-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;load the prepared data&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;plot-the-map&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;plot the map&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## add hillshade
+tm_shape(hill_shade) + 
+  tm_raster(palette = &amp;quot;-Greys&amp;quot;, n = 100, style = &amp;quot;cont&amp;quot;, legend.show = FALSE) +
+  
+  # add graticule
+  tm_graticules(lwd = 1.5, col = &amp;quot;grey75&amp;quot;, labels.size = 0.85) + 
+  
+  # add protected areas
+  tm_shape(protected_areas) + tm_fill(col = &amp;quot;green2&amp;quot;, alpha = 0.4) +  
+  tm_borders(col = &amp;quot;seagreen&amp;quot;) +
+    
+    ## add rivers and streams
+    tm_shape(rivers) + tm_lines(col = &amp;quot;dodgerblue&amp;quot;, lwd = 2) +
+    tm_shape(streams) + tm_lines(col = &amp;quot;deepskyblue&amp;quot;, lwd = 1) +
+  
+    ## add major roads
+    tm_shape(tertiary_roads) + tm_lines(col = &amp;quot;white&amp;quot;, lwd = 0.5) +
+    tm_shape(secondary_roads) + tm_lines(col = &amp;quot;white&amp;quot;, lwd = 1) +
+    tm_shape(trunk_roads) + tm_lines(col = &amp;quot;white&amp;quot;, lwd = 2) +
+    
+  ## add legend
+  tm_add_legend(type = &amp;quot;fill&amp;quot;, labels = &amp;quot;Protected area&amp;quot;, col = &amp;quot;green2&amp;quot;,
+                alpha = 0.4, border.col = &amp;quot;seagreen&amp;quot;) +
+    tm_add_legend(type = &amp;quot;line&amp;quot;, labels = &amp;quot;Roads&amp;quot;, col = &amp;quot;white&amp;quot;, 
+                lwd = 2) +
+  tm_add_legend(type = &amp;quot;line&amp;quot;, labels = &amp;quot;Rivers&amp;quot;, col = &amp;quot;skyblue&amp;quot;, lwd = 2) +
+    
+    
+  ## add compass and scale bar
+    tm_compass(position = c(0.89, 0.8), size = 2.5, bg.color = &amp;quot;grey90&amp;quot;, 
+               bg.alpha = 0.7) +
+    tm_scale_bar(position = c(0.6, 0.01), breaks = c(0, 10, 20), text.size = 0.75,
+                 bg.color = &amp;quot;grey90&amp;quot;, bg.alpha = 0.7) +
+    
+  ## adjust layout
+    tm_layout(frame.double.line = T, compass.type = &amp;quot;arrow&amp;quot;, 
+            legend.position = c(0.015, 0.7), legend.bg.color = &amp;quot;grey90&amp;quot;, 
+            legend.bg.alpha = 0.7, 
+            main.title.position = &amp;quot;center&amp;quot;,
+            legend.text.size = 0.85) &lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:fig1&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://akumar.netlify.app/post/making-maps-in-r/index_files/figure-html/fig1-1.png&#34; alt=&#34;Location and topography of selected protected areas. The map is prepared in `R` programming environment using the package `tmap`&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: Location and topography of selected protected areas. The map is prepared in &lt;code&gt;R&lt;/code&gt; programming environment using the package &lt;code&gt;tmap&lt;/code&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## remove all variables from the environment
+rm(list = ls())&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

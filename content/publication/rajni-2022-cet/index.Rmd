@@ -1,0 +1,79 @@
+---
+title: "Phytoremediation: A wonderful cost-effective tool"
+
+authors:
+- Rajni Yadav
+- Siril Singh
+- admin
+- Anand Narain Singh
+
+# Author notes (optional)
+author_notes: ""
+
+date: "2022-01-14"
+doi: "10.1016/B978-0-12-822933-0.00008-5"
+
+# Schedule page publish date (NOT publication's date).
+publishDate: ""
+
+# Publication type.
+# Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
+# 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
+# 7 = Thesis; 8 = Patent
+publication_types: ["6"]
+
+# Publication name and optional abbreviated publication name.
+publication: "In S. Kathi, S. Devipriya, & K. Thamaraiselvi (Eds.), *Cost Effective Technologies for Solid Waste and Wastewater Treatment* (pp. 179–208). Elsevier, Amsterdam"
+publication_short: ""
+
+abstract: Soil contamination by organic and inorganic compounds has become a severe concern worldwide due to its detrimental effects on ecosystem structure and functioning. This problem has been increasing due to anthropogenic activities that affect the soils’ physical, chemical and biological properties with unprecedented rates. Thus, among various remediation technologies for soil contamination management, phytoremediation has emerged as a promising cost-effective and sustainable technology. Therefore, the present chapter highlights the recent developments in the concept, types, mechanisms of this phytoremediation as a cost-effective technology for contaminated soils along with future perspectives. Available literature suggests that it is a better technology to remediate contaminated sites than conventional strategies and is considered a cost-effective and eco-friendly tool. Phytoremediation includes a range of plant-based remediation techniques such as rhizofiltration, phytostabilization, phytoextraction, phytovolatilization and phytodegradation focused on a different degree of remediation mechanisms. Further, recent developments in understanding the mechanism of phytoremediation have opened the window for the engineering of plants for effective remediation of contaminants. However, the information regarding which plant species is ideal and appropriate for a specific type of waste and its mechanism of phytoremediation is not fully synthesized. Therefore, to find out suitable plant species for Phytoremediation purposes based on needs and mechanisms whenever is required in a changing environment is mandatory. It is also expected that ecological evaluation of the desirable and most applicable, especially indigenous plants that probably can play a promising role in the development of a database for future research aspects in remediation and decontamination of limited air, water and soil resources of the biosphere. 
+
+# Summary. An optional shortened abstract.
+summary: ""
+tags:
+- Phytoremediation
+- Soil Contamination
+
+# Display this page in the Featured widget?
+featured: false
+
+# Custom links (uncomment lines below)
+links:
+- name: "Google Books"
+  url: "https://www.google.co.in/books/edition/Cost_Effective_Technologies_for_Solid_Wa/nFJLEAAAQBAJ?hl=en"    
+- name: "Buy on Amazon"
+  url: "https://www.amazon.in/Effective-Technologies-Wastewater-Treatment-Pollution/dp/0128229330"
+url_pdf: ""
+url_code: ''
+url_dataset: ''
+url_poster: ''
+url_project: ''
+url_slides: ''
+url_source: ''
+url_video: ''
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+image:
+  caption: ''
+focal_point: ""
+preview_only: false
+
+# Associated Projects (optional).
+#   Associate this publication with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `internal-project` references `content/project/internal-project/index.md`.
+#   Otherwise, set `projects: []`.
+projects: []
+
+# Slides (optional).
+#   Associate this publication with Markdown slides.
+#   Simply enter your slide deck's filename without extension.
+#   E.g. `slides: "example"` references `content/slides/example/index.md`.
+#   Otherwise, set `slides: ""`.
+slides: ""
+---
+
+  {{% callout note %}}
+Click the *Cite* button above to copy or download the citation for your reference management software.
+{{% /callout %}}

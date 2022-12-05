@@ -1,0 +1,44 @@
+---
+title: "Impact of changing environment on carbon dynamics in tropics with special focus on tropical dry forest ecosystems: A synthesis"
+authors:
+- Pardeep Kumar
+- Deepika Antil
+- admin
+- Meenu Patil
+- Anand Narain Singh
+date: '2021-04-22'
+author_notes: ''
+doi: 
+publishDate: '2021-04-23'
+publication_types: ['6']
+publication: 'In R. K. Chaturvedi, R. Singh, & R. Bhadouria (Eds.), *Tropical Dry Forests: Emerging Features and Ecological Perspectives* (pp. 207–246). Nova Science Publishers, New York'
+publication_short: ''
+math: true
+abstract: Tropical forests are estimated to have the highest carbon density and occupy more geographical areas than any other type of forest. Importantly, they act as a natural sink for atmospheric CO$_2$ and play a pivotal role to offset climate change and related environmental perturbations. Unfortunately, due to the mounting pressure of the increasing human population to sustain a livelihood for food, timber, medicine, tropical forests are subjected to land-use change, deforestation, and degradation by industrial activities, especially mining. In addition to this, global climate change (increasing CO$_2$ concentration, temperature, drought, and fires might have a disproportional effect on carbon (C) flux in the tropical forests. The changes above should be considered in tropical dry forests (TDFs) research because these forests often neglected over rain forests despite having a sizeable geographical extent and significant pool of C in vegetation and soil. In the wake of the elevated concentration of atmospheric CO$_2$, the net gain in net primary productivity (NPP) and forest growth rate is getting consideration for tropical forests today, meanwhile other factors like temperature, drought, and fire likely to negate the positive effect of increased CO$_2$ concentration in the atmosphere. Recent studies designate tropical forests overall as C neutral since the loss of carbon due to deforestation and degradation is compensated by regrowth and recovery of past disturbances. So, there is an immense potential in the tropical forests to curb elevated CO$_2$ if policies and afforestation provisions and initiatives such as REDD+ if implemented effectively at the global level. In this chapter, we address the current state of knowledge on C stock and flux, and the magnitude of various disturbances (land-use change, deforestation), climatic perturbations (elevated CO$_2$, increased temperature, drought, and fires) on carbon balance in the tropical forests. Furthermore, we also discuss various research gaps for sustaining its structure, function, and ecosystem services; and recent methodological advancements for the estimation of C stock in the tropical forests.
+summary: ''
+tags:
+- Carbon Dynamics
+- Tropical Forest
+featured: no
+links:
+- name: View at Publisher
+  url: https://novapublishers.com/shop/tropical-dry-forests-emerging-features-and-ecological-perspectives/
+url_pdf: ''
+url_code: ''
+url_dataset: ''
+url_poster: ''
+url_project: ''
+url_slides: ''
+url_source: ''
+url_video: ''
+image:
+  caption: 'Image credit: [**Nova Science Publishers**](https://novapublishers.com/shop/tropical-dry-forests-emerging-features-and-ecological-perspectives/)'
+focal_point: ''
+preview_only: no
+projects: []
+slides: null
+---
+
+  {{% callout note %}}
+Click the *Cite* button above to copy or import publication metadata into their reference management software.
+{{% /callout %}}

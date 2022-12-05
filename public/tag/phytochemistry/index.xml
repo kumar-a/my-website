@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Phytochemistry | Abhishek Kumar</title>
+    <link>https://akumar.netlify.app/tag/phytochemistry/</link>
+      <atom:link href="https://akumar.netlify.app/tag/phytochemistry/index.xml" rel="self" type="application/rss+xml" />
+    <description>Phytochemistry</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 Abhishek Kumar</copyright><lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://akumar.netlify.app/media/icon_hu63af8eaec43cac92558e0334cb2dff24_36198_512x512_fill_lanczos_center_3.png</url>
+      <title>Phytochemistry</title>
+      <link>https://akumar.netlify.app/tag/phytochemistry/</link>
+    </image>
+    
+    <item>
+      <title>Mallotus philippensis (Lam.) Müll. Arg.: A review on its pharmacology and phytochemistry</title>
+      <link>https://akumar.netlify.app/publication/abhishek-2021-jhp/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://akumar.netlify.app/publication/abhishek-2021-jhp/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

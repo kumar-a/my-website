@@ -1,0 +1,134 @@
+---
+title: Protected Areas in Siwaliks of north-west India
+author: Abhishek Kumar
+date: '2021-12-29'
+slug: protected-areas-in-siwaliks
+categories:
+  - R
+tags:
+  - National Parks
+  - Wildlife Sanctuaries
+  - Siwaliks
+subtitle: ''
+summary: 'Siwaliks is the biodiversity rich foothills of the Indian Himalayas. This region falls under four states and two union territories of India. About 3000 km<sup>2</sup> area of this region is falls under the protected area network. It has four national parks, 16 wildlife sanctuaries, 13 conservation reserves and two community reserves.'
+authors: []
+lastmod: '2021-12-29T18:16:48+05:30'
+featured: yes
+image:
+  caption: 'Deers fleeing by a tiger in Corbett National Park. Photo by [Venkat Jay](https://unsplash.com/@jvenkatj) on [Unsplash](https://unsplash.com/photos/IWliol3MJnY)'
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+
+```{r setup, include=FALSE}
+## set global options for markdown
+knitr::opts_chunk$set(comment = "#>", collapse = TRUE, 
+                      fig.align = 'center', fig.width = 7, fig.height = 5, 
+                      out.width = '90%', dev = "svglite",
+                      echo=FALSE, message=FALSE, warning=FALSE)
+library(gt)
+```
+
+
+
+```{r}
+rbind(
+    c("Chandigarh", "Sukhna Lake", "WLS", "1986", "25.98"),
+    
+    c("Haryana", "Kalesar", "NP", "2003", "46.82"),
+    c("Haryana", "Bir Shikargah", "WLS", "1987", "7.67"),  
+    c("Haryana", "Kalesar", "WLS", "1996", "54.36"),
+    c("Haryana", "Khol Hi Raitan", "WLS", "2004", "48.83"),
+    
+    
+    c("Himachal Pradesh", "Simbalbara", "NP", "2010", "27.88"),
+    c("Himachal Pradesh", "Gobind Sagar", "WLS", "1962", "100.34"),
+    c("Himachal Pradesh", "Pong Dam Lake", "WLS", "1982", "207.59"),
+    c("Himachal Pradesh", "Shilli", "ConR", "2013", "1.49"),
+    c("Himachal Pradesh", "Shri Naina Devi", "ConR", "2013", "17.01"),
+    
+    c("Jammu and Kashmir", "Jasrota", "WLS", "1987", "10.04"),
+    c("Jammu and Kashmir", "Nandni", "WLS", "1981", "33.34"),
+    c("Jammu and Kashmir", "Ramnagar Rakha", "WLS", "1981", "31.5"),
+    c("Jammu and Kashmir", "Surinsar Mansar", "WLS", "1981", "97.82"),
+    c("Jammu and Kashmir", "Trikuta", "WLS", "1981", "31.77"),
+    c("Jammu and Kashmir", "Bahu", "ConR", "2008", "19.75"),
+    c("Jammu and Kashmir", "Gharana Wetland", "ConR", "2008", "0.75"),
+    c("Jammu and Kashmir", "Kukarian Wetland", "ConR", "2008", "24.25"),
+    c("Jammu and Kashmir", "Nanga Wetland", "ConR", "2008", "15.25"),
+    c("Jammu and Kashmir", "Pargwal Wetland", "ConR", "2008", "49.25"),
+    c("Jammu and Kashmir", "Sangral-Asachak Wetland", "ConR", "2008", "7.00"),
+    c("Jammu and Kashmir", "Thein Wetland", "ConR", "2008", "18.90"),
+    
+    
+    c("Punjab", "Jhajjar Bacholi", "WLS", "1998", "1.16"),
+    c("Punjab", "Takhni-Rehampur", "WLS", "1992", "3.82"),
+    c("Punjab", "Nangal", "WLS", "2009", "2.9"),
+    c("Punjab", "Ranjit Sagar", "ConR", "2017", "18.65"),
+    c("Punjab", "Ropar Wetland", "ConR", "2017", "2.11"),
+    c("Punjab", "Lalwan", "ComR", "2007", "12.67"),
+    c("Punjab", "Siswan", "ComR", "2017", "12.95"),
+    
+    c("Uttarakhand", "Corbett", "NP", "1936", "520.82"),
+    c("Uttarakhand", "Rajaji", "NP", "1983", "820"),
+    c("Uttarakhand", "Nandhaur", "WLS", "2012", "269.96"),
+    c("Uttarakhand", "Sonanadi", "WLS", "1987", "301.18"),
+    c("Uttarakhand", "Jhilmil Jheel", "ConR", "2005", "37.84"),
+    c("Uttarakhand", "Pawalgarh", "ConR", "2012", "58.25")
+    
+) |>
+    
+    as.data.frame() |> 
+    
+    dplyr::mutate(V1 = as.factor(V1), V3 = as.factor(V3), V4 = as.integer(V4), 
+           V5 = as.numeric(V5)) |>
+      
+    dplyr::rename("State/UT" = V1, "Name" = V2 , "Type" = V3, "Year" = V4, 
+               "Area" = V5) |>
+  
+    gt() |>
+    
+    cols_label(Area = md("Area (km<sup>2</sup>)")) |>
+    
+    fmt_number(columns = 5) |>
+    
+    cols_align(align = "left", columns = 1) |>
+    
+    tab_source_note(
+        md("**References:** <br>
+       Gosh-Harihar et al ([2019](https://doi.org/10.1016/j.biocon.2019.06.024));
+       Sivakumar et al ([2010](http://environmentportal.in/files/Shivalik.pdf))")
+    ) |>
+    
+    tab_source_note(
+        md("**Websites:** <br>
+      Protected Areas: <http://www.wiienvis.nic.in/Database/Protected_Area_854.aspx> <br>
+      National Parks: <http://wiienvis.nic.in/Database/npa_8231.aspx> <br>
+      Wildlife Sanctuaries: <http://wiienvis.nic.in/Database/wls_8230.aspx> <br>
+      Conservation Reserves: <http://wiienvis.nic.in/Database/cri_8229.aspx> <br>
+      Community Reserves: <http://wiienvis.nic.in/Database/cri_8228.aspx>"
+        )
+    ) |>
+    
+    tab_options(
+        column_labels.border.top.width = 2,
+        column_labels.border.top.color = "black",
+        
+        table_body.border.top.color = "black",
+        table_body.border.top.width = 3,
+        
+        table_body.border.bottom.color = "black",
+        table_body.border.bottom.width = 2,
+        
+        table.border.bottom.width = 0,
+        table.border.bottom.color = NULL,
+        
+        # make the width 100%
+        table.width = pct(100),
+        table.background.color = "white"
+    )
+
+```
+

@@ -1,0 +1,79 @@
+---
+title: "Comparative soil restoration potential of exotic and native woody plantations on coal mine spoil in a dry tropical environment of India: A case study"
+
+# Authors
+# If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here 
+# and it will be replaced with their full name and linked to their profile.
+authors:
+- Anand Narain Singh
+- admin
+
+# Author notes (optional)
+author_notes: ""
+
+date: "2022-07-09"
+doi: "10.1002/ldr.4286"
+
+# Schedule page publish date (NOT publication's date).
+publishDate: "2022-07-10"
+
+# Publication type.
+# Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
+# 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
+# 7 = Thesis; 8 = Patent
+publication_types: ["2"]
+
+# Publication name and optional abbreviated publication name.
+publication: "*Land Degradation & Development, 33*(12), 1971--1984"
+publication_short: ""
+
+abstract: Overburden excavated during opencast mining has poorer soil properties due to non-salvage and inversion of soil profiles. The soil properties of such overburden are often improved by the biological reclamation technique such as planting suitable plant species; however, the performance of species varies site-to-site. Therefore, this paper aims to evaluate the effects of woody plantations on coal mine spoil's physicochemical and biological properties. We synthesised the available data from previous studies conducted on 5-year-plantations in Singrauli coalfields of India. These plantations have monocultures of eight species, in which four were exotic (*Acacia auriculiformis*, *Casuarina equisetifolia*, *Cassia siamea* and *Grevillea pteridifolia*) and four were native species (*Albizia lebbeck*, *Albizia procera*, *Dendrocalamus strictus* and *Tectona grandis*). We compared the soil properties under exotic and native species plantations to evaluate the effect of species and origin. The Wilcoxon's test showed that the clay content (*p* = 0.000), ammonium-nitrogen (*p* = 0.002), phosphate-phosphorus (*p* = 0.000), and microbial biomass nutrients (C, N, and P; *p* = 0.000) were significantly higher under native plantations than the exotic plantations. Further, we observed a significant positive correlation (*r* = 0.86, *p* < 0.001) between soil organic carbon and microbial biomass carbon for native species. We also found that microbial biomass nutrients are negatively associated with nitrification rates and positively associated with nitrogen mineralisation rates. Overall, our study suggested that exotic species plantations are not as effective as native species in mine spoil rehabilitation. Thus, native species plantations should be promoted while restoring degraded coal mine habitats in a dry tropical environment.
+
+# Summary. An optional shortened abstract.
+summary: ""
+tags:
+- Coal mine
+- Restoration
+- Soil
+
+# Display this page in the Featured widget?
+featured: false
+
+# Custom links (uncomment lines below)
+links:
+- name: "View at Publisher"
+  url: "https://onlinelibrary.wiley.com/doi/10.1002/ldr.4286"
+url_pdf: "https://onlinelibrary.wiley.com/doi/10.1002/ldr.4286"
+url_code: ''
+url_dataset: ''
+url_poster: ''
+url_project: ''
+url_slides: ''
+url_source: ''
+url_video: ''
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder. 
+image:
+  caption: 'Soil properties under exotic and native plantations after 5-years of establishment' 
+  focal_point: ""
+  preview_only: false
+
+# Associated Projects (optional).
+#   Associate this publication with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `internal-project` references `content/project/internal-project/index.md`.
+#   Otherwise, set `projects: []`.
+projects: []
+
+# Slides (optional).
+#   Associate this publication with Markdown slides.
+#   Simply enter your slide deck's filename without extension.
+#   E.g. `slides: "example"` references `content/slides/example/index.md`.
+#   Otherwise, set `slides: ""`.
+slides: ""
+---
+
+{{% callout note %}}
+Click the *Cite* button above to copy or download the citation into your reference management software.
+{{% /callout %}}

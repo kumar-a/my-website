@@ -1,0 +1,142 @@
+---
+title: Making maps in R
+author: Abhishek Kumar
+date: '2021-11-09'
+slug: making-maps-in-r
+categories:
+  - R
+  - map
+tags:
+  - R
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2021-11-09T11:57:59+05:30'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+
+<div id="load-the-required-packages" class="section level2">
+<h2>load the required packages</h2>
+<pre class="r"><code>library(dplyr)       # general data wrangling
+library(raster)      # raster data
+library(sf)          # spatial data handling
+library(tmap)        # thematic mapping</code></pre>
+</div>
+<div id="download-and-prepare-the-data" class="section level2">
+<h2>download and prepare the data</h2>
+<pre class="r"><code>## extract boundaries and data from OpenStreetMap
+library(osmdata)
+
+## define a bounding box for area of interest
+osm_bbox &lt;- c(76.8079, 30.6636, 77.5173, 31.0125) # xmin, ymin, xmax, ymax
+
+## extract boundary of the protected area as sf from OpenStreetMap (osm)
+protected_areas &lt;- opq(osm_bbox) |&gt;
+  add_osm_feature(key = &quot;boundary&quot;, value = &quot;protected_area&quot;, value_exact = F) |&gt;
+  osmdata_sf()
+
+## rename protected areas to short names and save to local file as gpkg
+protected_areas$osm_polygons |&gt; select(name, geometry) |&gt;
+  mutate(short_name = c(&quot;CL&quot;, &quot;CD&quot;, &quot;MH&quot;, &quot;BS&quot;, &quot;SL&quot;)) |&gt;
+  st_write(&quot;data/protected_areas.gpkg&quot;)
+
+## extract rivers / streams (waterways) from osm as sf
+waterways &lt;- opq(osm_bbox) |&gt; add_osm_feature(key = &quot;waterway&quot;) |&gt; 
+  osmdata_sf()
+
+## save waterways to local file as gpkg
+waterways$osm_lines |&gt; select(name, waterway, geometry) |&gt; 
+  st_write(&quot;data/waterways.gpkg&quot;)
+
+## extract roadways (highway) major roads from osm as sf
+highways &lt;- opq(osm_bbox) |&gt; add_osm_feature(key = &quot;highway&quot;) |&gt; 
+  osmdata_sf()
+
+## save roadways to local file as gpkg
+highways$osm_lines |&gt; select(name, highway, geometry) |&gt; 
+  st_write(&quot;data/highways.gpkg&quot;)
+
+## load, merge, and crop pre-downloaded SRTM 30 m elevation data 
+elev &lt;- raster(&quot;D:/spatial-data/dem/n30_e076_1arc_v3.tif&quot;) |&gt;
+    merge(raster(&quot;D:/spatial-data/dem/n30_e077_1arc_v3.tif&quot;)) |&gt; 
+    merge(raster(&quot;D:/spatial-data/dem/n31_e076_1arc_v3.tif&quot;)) |&gt; 
+    merge(raster(&quot;D:/spatial-data/dem/n31_e077_1arc_v3.tif&quot;)) |&gt; 
+    crop(extent(76.8079, 77.5173, 30.6636, 31.0125))
+
+## prepare and save hillshade
+hillShade(
+    # extract slope from elevation
+    slope = terrain(elev, opt= &quot;slope&quot;),
+    
+    # extract aspect from elevation
+    aspect = terrain(elev, opt= &quot;aspect&quot;), 
+    
+    # 45 altitude angle and 315 azimuth angle
+    angle = 45, direction = 315) |&gt; 
+    writeRaster(&quot;data/hill_shade.tif&quot;)
+
+## remove all files from environment
+rm(list = ls())</code></pre>
+</div>
+<div id="load-the-prepared-data" class="section level2">
+<h2>load the prepared data</h2>
+</div>
+<div id="plot-the-map" class="section level2">
+<h2>plot the map</h2>
+<pre class="r"><code>## add hillshade
+tm_shape(hill_shade) + 
+  tm_raster(palette = &quot;-Greys&quot;, n = 100, style = &quot;cont&quot;, legend.show = FALSE) +
+  
+  # add graticule
+  tm_graticules(lwd = 1.5, col = &quot;grey75&quot;, labels.size = 0.85) + 
+  
+  # add protected areas
+  tm_shape(protected_areas) + tm_fill(col = &quot;green2&quot;, alpha = 0.4) +  
+  tm_borders(col = &quot;seagreen&quot;) +
+    
+    ## add rivers and streams
+    tm_shape(rivers) + tm_lines(col = &quot;dodgerblue&quot;, lwd = 2) +
+    tm_shape(streams) + tm_lines(col = &quot;deepskyblue&quot;, lwd = 1) +
+  
+    ## add major roads
+    tm_shape(tertiary_roads) + tm_lines(col = &quot;white&quot;, lwd = 0.5) +
+    tm_shape(secondary_roads) + tm_lines(col = &quot;white&quot;, lwd = 1) +
+    tm_shape(trunk_roads) + tm_lines(col = &quot;white&quot;, lwd = 2) +
+    
+  ## add legend
+  tm_add_legend(type = &quot;fill&quot;, labels = &quot;Protected area&quot;, col = &quot;green2&quot;,
+                alpha = 0.4, border.col = &quot;seagreen&quot;) +
+    tm_add_legend(type = &quot;line&quot;, labels = &quot;Roads&quot;, col = &quot;white&quot;, 
+                lwd = 2) +
+  tm_add_legend(type = &quot;line&quot;, labels = &quot;Rivers&quot;, col = &quot;skyblue&quot;, lwd = 2) +
+    
+    
+  ## add compass and scale bar
+    tm_compass(position = c(0.89, 0.8), size = 2.5, bg.color = &quot;grey90&quot;, 
+               bg.alpha = 0.7) +
+    tm_scale_bar(position = c(0.6, 0.01), breaks = c(0, 10, 20), text.size = 0.75,
+                 bg.color = &quot;grey90&quot;, bg.alpha = 0.7) +
+    
+  ## adjust layout
+    tm_layout(frame.double.line = T, compass.type = &quot;arrow&quot;, 
+            legend.position = c(0.015, 0.7), legend.bg.color = &quot;grey90&quot;, 
+            legend.bg.alpha = 0.7, 
+            main.title.position = &quot;center&quot;,
+            legend.text.size = 0.85) </code></pre>
+<div class="figure"><span style="display:block;" id="fig:fig1"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/fig1-1.png" alt="Location and topography of selected protected areas. The map is prepared in `R` programming environment using the package `tmap`" width="672" />
+<p class="caption">
+Figure 1: Location and topography of selected protected areas. The map is prepared in <code>R</code> programming environment using the package <code>tmap</code>
+</p>
+</div>
+<pre class="r"><code>## remove all variables from the environment
+rm(list = ls())</code></pre>
+</div>

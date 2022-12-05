@@ -1,0 +1,162 @@
+---
+title: Making maps in R
+author: Abhishek Kumar
+date: '2021-11-09'
+slug: making-maps-in-r
+categories:
+  - R
+  - map
+tags:
+  - R
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2021-11-09T11:57:59+05:30'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = T, message = FALSE, warning = FALSE)
+```
+
+## load the required packages
+
+```{r}
+library(dplyr)       # general data wrangling
+library(raster)      # raster data
+library(sf)          # spatial data handling
+library(tmap)        # thematic mapping
+```
+
+## download and prepare the data
+
+```{r eval=FALSE}
+## extract boundaries and data from OpenStreetMap
+library(osmdata)
+
+## define a bounding box for area of interest
+osm_bbox <- c(76.8079, 30.6636, 77.5173, 31.0125) # xmin, ymin, xmax, ymax
+
+## extract boundary of the protected area as sf from OpenStreetMap (osm)
+protected_areas <- opq(osm_bbox) |>
+  add_osm_feature(key = "boundary", value = "protected_area", value_exact = F) |>
+  osmdata_sf()
+
+## rename protected areas to short names and save to local file as gpkg
+protected_areas$osm_polygons |> select(name, geometry) |>
+  mutate(short_name = c("CL", "CD", "MH", "BS", "SL")) |>
+  st_write("data/protected_areas.gpkg")
+
+## extract rivers / streams (waterways) from osm as sf
+waterways <- opq(osm_bbox) |> add_osm_feature(key = "waterway") |> 
+  osmdata_sf()
+
+## save waterways to local file as gpkg
+waterways$osm_lines |> select(name, waterway, geometry) |> 
+  st_write("data/waterways.gpkg")
+
+## extract roadways (highway) major roads from osm as sf
+highways <- opq(osm_bbox) |> add_osm_feature(key = "highway") |> 
+  osmdata_sf()
+
+## save roadways to local file as gpkg
+highways$osm_lines |> select(name, highway, geometry) |> 
+  st_write("data/highways.gpkg")
+
+## load, merge, and crop pre-downloaded SRTM 30 m elevation data 
+elev <- raster("D:/spatial-data/dem/n30_e076_1arc_v3.tif") |>
+	merge(raster("D:/spatial-data/dem/n30_e077_1arc_v3.tif")) |> 
+	merge(raster("D:/spatial-data/dem/n31_e076_1arc_v3.tif")) |> 
+	merge(raster("D:/spatial-data/dem/n31_e077_1arc_v3.tif")) |> 
+	crop(extent(76.8079, 77.5173, 30.6636, 31.0125))
+
+## prepare and save hillshade
+hillShade(
+	# extract slope from elevation
+	slope = terrain(elev, opt= "slope"),
+	
+	# extract aspect from elevation
+	aspect = terrain(elev, opt= "aspect"), 
+	
+	# 45 altitude angle and 315 azimuth angle
+	angle = 45, direction = 315) |> 
+    writeRaster("data/hill_shade.tif")
+
+## remove all files from environment
+rm(list = ls())
+```
+
+## load the prepared data
+
+```{r include=FALSE}
+## boundary for area of interest (protected area)
+protected_areas <- st_read("data/protected_areas.gpkg")
+
+## filter waterways into major river and streams
+waterways <- st_read("data/waterways.gpkg")
+rivers <- waterways |> filter(waterway == "river")
+streams <- waterways |> filter(waterway == "stream")
+
+## filter major roads
+highways <- st_read("data/highways.gpkg")
+trunk_roads <- highways |> filter(highway == "trunk")
+secondary_roads <- highways |> filter(highway == "secondary")
+tertiary_roads <- highways |> filter(highway == "tertiary")
+
+## read the hillshade raster
+hill_shade <- raster("data/hill_shade.tif")
+```
+
+## plot the map
+
+```{r fig1, fig.cap="Location and topography of selected protected areas. The map is prepared in `R` programming environment using the package `tmap`"}
+
+## add hillshade
+tm_shape(hill_shade) + 
+  tm_raster(palette = "-Greys", n = 100, style = "cont", legend.show = FALSE) +
+  
+  # add graticule
+  tm_graticules(lwd = 1.5, col = "grey75", labels.size = 0.85) + 
+  
+  # add protected areas
+  tm_shape(protected_areas) + tm_fill(col = "green2", alpha = 0.4) +  
+  tm_borders(col = "seagreen") +
+    
+    ## add rivers and streams
+	tm_shape(rivers) + tm_lines(col = "dodgerblue", lwd = 2) +
+	tm_shape(streams) + tm_lines(col = "deepskyblue", lwd = 1) +
+  
+	## add major roads
+	tm_shape(tertiary_roads) + tm_lines(col = "white", lwd = 0.5) +
+	tm_shape(secondary_roads) + tm_lines(col = "white", lwd = 1) +
+	tm_shape(trunk_roads) + tm_lines(col = "white", lwd = 2) +
+  	
+  ## add legend
+  tm_add_legend(type = "fill", labels = "Protected area", col = "green2",
+                alpha = 0.4, border.col = "seagreen") +
+	tm_add_legend(type = "line", labels = "Roads", col = "white", 
+                lwd = 2) +
+  tm_add_legend(type = "line", labels = "Rivers", col = "skyblue", lwd = 2) +
+    
+    
+  ## add compass and scale bar
+	tm_compass(position = c(0.89, 0.8), size = 2.5, bg.color = "grey90", 
+	           bg.alpha = 0.7) +
+	tm_scale_bar(position = c(0.6, 0.01), breaks = c(0, 10, 20), text.size = 0.75,
+	             bg.color = "grey90", bg.alpha = 0.7) +
+    
+  ## adjust layout
+	tm_layout(frame.double.line = T, compass.type = "arrow", 
+            legend.position = c(0.015, 0.7), legend.bg.color = "grey90", 
+            legend.bg.alpha = 0.7, 
+            main.title.position = "center",
+            legend.text.size = 0.85) 
+
+## remove all variables from the environment
+rm(list = ls())
+```

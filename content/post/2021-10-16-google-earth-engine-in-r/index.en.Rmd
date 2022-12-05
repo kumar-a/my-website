@@ -1,0 +1,299 @@
+---
+title: Google Earth Engine in R
+author: Abhishek Kumar
+date: '2021-10-16'
+slug: google-earth-engine-in-r
+categories:
+  - R
+  - rgee
+tags:
+  - Remote Sensing
+  - Google Earth Engine
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2021-10-16T16:23:06+05:30'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+
+bibliography: [refs.bib, packages.bib]
+---
+
+```{r message=FALSE, warning=FALSE, echo=FALSE}
+## set global options for markdown
+knitr::opts_chunk$set(comment = "#>", collapse = TRUE, fig.align = 'center',
+			    fig.width = 7, fig.height = 5, out.width = '90%', dev = "svglite",
+			    echo=T, message=FALSE, warning=FALSE)
+```
+
+
+## Introduction
+
+Google Earth Engine (GEE) is a cloud-based platform for planetary-scale geo-spatial analysis [@Gorelick2017]. The cloud-based computation ability overcomes the limitations of data access, data storage, personal limited computation ability and time. Thus, it provides a platform for large scale analysis of earth observations through access to satellite imagery.
+
+Google offered support only for Python and JavaScript, and GEE was not accessible to `R` [@R-base] users until Aybar et al. [-@rgee2020] developed `rgee` package [@R-rgee].
+
+```{r message=FALSE, warning=FALSE, results='hide'}
+library(rgee)
+ee_Initialize()
+
+#knitr::write_bib(x = c(.packages(), "blogdown"), "packages.bib")
+```
+
+## Data and Pre-processing
+
+Data Product: [Sentinel-2 MSI: MultiSpectral Instrument, Level-2A](https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR)
+
+Sentinel-2 is a wide-swath, high-resolution, multi-spectral imaging mission supporting Copernicus Land Monitoring studies, including the monitoring of vegetation, soil and water cover, as well as observation of inland waterways and coastal areas. The SENTINEL-2 data contain 13 spectral bands representing TOA reflectance scaled by 10000.
+
+```{r}
+# define a region of interest
+roi <- ee$Geometry$Rectangle(76.85, 30.66, 77.01, 30.75)
+
+# load and pre-process sentinel-2 data
+# Filter the image collection
+img <- ee$ImageCollection("COPERNICUS/S2_SR")$
+  
+  # filter the date range we are interested in
+  filterDate("2020-01-01", "2020-12-31")$
+  
+  # filter geographic area we are interested in 
+  filterBounds(roi)$
+  
+  # filter cloud cover less than 20%
+  filter(ee$Filter$lt("CLOUD_COVERAGE_ASSESSMENT", 20))$
+  
+  # filter cloud pixel percentage to less than 20%
+  filter(ee$Filter$lt("CLOUDY_PIXEL_PERCENTAGE", 20))$
+  
+  # reduce image collection by taking median value
+  median()$
+  
+  # clip to region of interest
+  clip(roi)
+
+# print band names
+img$bandNames()$getInfo()
+```
+
+## Median true color composite
+
+```{r}
+Map$centerObject(roi, 12)
+Map$addLayer(img, 
+             visParams = list(min = 0, max = 3000, bands = c("B4", "B3", "B2")),
+             name = "true color")
+```
+
+## Median false color composite
+
+```{r}
+Map$centerObject(roi, 12)
+Map$addLayer(img, 
+             visParams = list(min = 0, max = 3000, bands = c("B8", "B4", "B3")),
+             name = "false color")
+```
+
+## Spectral Indices
+
+### Vegetation cover
+
+#### NDVI: Normalized Difference Vegetation Index
+
+```{r}
+# calculate indices e.g. NDVI
+ndvi <- img$expression(
+  expression = "(NIR - RED)/(NIR + RED)",
+  opt_map = list("RED" = img$select("B4"),
+                 "NIR" = img$select("B8")
+                 ))$rename("ndvi")
+
+vis_pal <- c('FFFFFF', 'CE7E45', 'DF923D', 'F1B555', 'FCD163', '99B718', 
+             '74A901', '66A000', '529400', '3E8601', '207401', '056201',
+             '004C00', '023B01', '012E01', '011D01', '011301')
+
+Map$centerObject(roi, 12)
+Map$addLayer(ndvi, 
+             visParams = list(min = 0, max = 1, palette = vis_pal),
+             name = "NDVI")
+```
+
+#### NDVIre: Normalized Difference Vegetation Index red-edge
+
+```{r}
+ndvire <- img$expression(
+  expression = "(RedEdge1 - RED)/(RedEdge1 + RED)",
+  opt_map = list("RED" = img$select("B4"),
+                 "RedEdge1" = img$select("B5")
+                 ))$rename("ndvire")
+
+vis_pal <- c('FFFFFF', 'CE7E45', 'DF923D', 'F1B555', 'FCD163', '99B718', 
+             '74A901', '66A000', '529400', '3E8601', '207401', '056201',
+             '004C00', '023B01', '012E01', '011D01', '011301')
+
+Map$centerObject(roi, 12)
+Map$addLayer(ndvire, 
+             visParams = list(min = 0, max = 1, palette = vis_pal),
+             name = "NDVIre")
+```
+
+#### EVI: Enhanced vegetation Index
+
+```{r}
+# calculate EVI
+evi <- img$expression(
+  expression = "2.5 * ((NIR - RED) / (NIR + 6 * RED - 7.5 * BLUE + 10000))",
+  opt_map = list("BLUE" = img$select("B2"),
+                 "RED" = img$select("B4"),
+                 "NIR" = img$select("B8")
+                 ))$rename("evi")
+
+Map$centerObject(roi, 12)
+Map$addLayer(evi, 
+             visParams = list(palette = vis_pal),
+             name = "EVI")
+```
+
+#### SAVI: Soil-adjusted Vegetation Index
+
+```{r}
+savi <- img$expression(
+  expression = "((NIR - RED) / (NIR + RED + 0.5)) * 1.5",
+  opt_map = list("RED" = img$select("B4")$multiply(0.0001),
+                 "NIR" = img$select("B8")$multiply(0.0001)
+                 ))$rename("savi")
+
+Map$centerObject(roi, 12)
+Map$addLayer(savi, 
+             visParams = list(min = 0, max = 0.5, 
+                              palette = c("brown", "yellow", "green")),
+             name = "SAVI")
+```
+
+### Water bodies
+
+#### NBR/NDWI: Normalized Burn Ratio / Normalized Difference Water Index
+
+```{r}
+ndwi <- img$expression(
+  expression = "(NIR - SWIR) / (NIR + SWIR)",
+  opt_map = list("NIR" = img$select("B8"),
+                 "SWIR" = img$select("B12")
+                 ))$rename("ndwi")
+
+Map$centerObject(roi, 12)
+Map$addLayer(ndwi, 
+             visParams = list(min = 0, max = 0.5, 
+                              palette = c("blue", "white", "green")),
+             name = "NDWI")
+```
+
+#### MNDWI: Modified Normalized Difference Water Index
+
+```{r}
+mndwi <- img$expression(
+  expression = "(GREEN - SWIR1) / (GREEN + SWIR1)",
+  opt_map = list("GREEN" = img$select("B3"),
+                 "SWIR1" = img$select("B11")
+                 ))$rename("mndwi")
+
+Map$centerObject(roi, 12)
+Map$addLayer(ndwi, 
+             visParams = list(min = 0, max = 0.5, 
+                              palette = c("blue", "white", "green")),
+             name = "MNDWI")
+```
+
+#### AWEI_sh: Automated Water Extraction Index - shadow
+
+```{r}
+aweish <- img$expression(
+  expression = "BLUE + 2.5 * GREEN - 1.5 * (NIR + SWIR1) - 0.25 * SWIR2",
+  opt_map = list("BLUE" = img$select("B2"),
+                 "GREEN" = img$select("B3"),
+                 "NIR" = img$select("B8"),
+                 "SWIR1" = img$select("B11"),
+                 "SWIR2" = img$select("B12")
+                 ))$rename("aweish")
+
+Map$centerObject(roi, 12)
+Map$addLayer(aweish, 
+             visParams = list(min = 0, max = 1, palette = c("white", "blue")),
+             name = "AWEIsh")
+```
+
+### Built up areas
+
+#### NDBI: Normalized Difference Built-up Index
+
+```{r}
+ndbi <- img$expression(
+  expression = "(SWIR1 - NIR) / (SWIR1 + NIR)",
+  opt_map = list("NIR" = img$select("B8"),
+                 "SWIR1" = img$select("B11")
+                 ))$rename("ndbi")
+
+Map$centerObject(roi, 12)
+Map$addLayer(ndbi, 
+             visParams = list(min = -1, max = 1, palette = c("white", "brown")),
+             name = "NDBI")
+```
+
+#### BUI: Built-up Index
+
+```{r}
+bui <- img$expression(
+  expression = "((SWIR1 - NIR) / (SWIR1 + NIR)) - ((NIR - RED)/(NIR + RED))",
+  opt_map = list("RED" = img$select("B4"),
+                 "NIR" = img$select("B8"),
+                 "SWIR1" = img$select("B11")
+                 ))$rename("bui")
+
+
+Map$centerObject(roi, 12)
+Map$addLayer(bui, 
+             visParams = list(min = -1, max = 0.5, palette = c("green", "white", "brown")),
+             name = "BUI")
+```
+
+### Soil related Indices
+
+#### NDTI: Normalized Difference Tillage Index
+
+```{r}
+ndti <- img$expression(
+  expression = "(SWIR1 - SWIR2) / (SWIR1 + SWIR2)",
+  opt_map = list("SWIR1" = img$select("B11"),
+                 "SWIR2" = img$select("B12")
+                 ))$rename("ndti")
+
+Map$centerObject(roi, 12)
+Map$addLayer(ndti, 
+             visParams = list(min = 0, max = 0.5, palette = c("brown", "yellow", "green")),
+             name = "NDTI")
+```
+
+#### BSI: Bare Soil Index
+
+```{r}
+bsi <- img$expression(
+  expression = "(((SWIR1 + RED) - (NIR + BLUE)) / (SWIR1 + RED)) + (NIR + BLUE)",
+  opt_map = list("BLUE" = img$select("B2"),
+                 "RED" = img$select("B4"),
+                 "NIR" = img$select("B8"),
+                 "SWIR1" = img$select("B11"),
+                 "SWIR2" = img$select("B12")
+                 ))$rename("bsi")
+
+Map$centerObject(roi, 12)
+Map$addLayer(bsi, 
+             visParams = list(min = 1000, max = 4000, palette = c("white", "brown")),
+             name = "BSI")
+```
+
+
+## References

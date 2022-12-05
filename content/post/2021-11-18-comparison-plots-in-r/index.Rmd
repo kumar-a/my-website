@@ -1,0 +1,80 @@
+---
+title: Comparison plots in R
+author: Abhishek Kumar
+date: '2021-11-18'
+slug: comparison-plots-in-r
+categories: []
+tags:
+  - R
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2021-11-18T18:16:15+05:30'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+## data
+
+```{r}
+data("iris")
+head(iris)
+```
+
+
+## Bar plot
+
+```{r}
+library(tidyverse)
+df <- iris |> pivot_longer(cols = -Species, names_to = "variables", values_to = "values")
+
+df |> ggplot(aes(x = variables, y = values)) +
+    geom_bar(aes(fill = Species), stat = "identity", position = "dodge") +
+    theme_bw()
+```
+
+
+## Boxplot
+
+```{r}
+df |> ggplot(aes(x = variables, y = values)) +
+    geom_boxplot(aes(fill = Species, color = Species), alpha = 0.2, notch = F) +
+    theme_bw()
+```
+
+
+## Violin plot
+
+```{r}
+df |> ggplot(aes(x = variables, y = values)) +
+    geom_violin(aes(fill = Species, color = Species), alpha = 0.2, trim = F) +
+    theme_bw()
+
+df |> filter(variables == "Petal.Length") |>
+    ggplot(aes(x = Species, y = values)) +
+    geom_violin(aes(fill = Species, color = Species), alpha = 0.2, trim = F) +
+    scale_fill_brewer(palette = "Set1") +
+    scale_color_brewer(palette = "Set1") +
+    geom_boxplot(width = 0.15, coef = 0, outlier.alpha = 0.2) +
+    stat_summary(pch = 23, color = "red", fill = "white", size = 0.75) +
+    theme_bw()
+```
+
+
+## Density plot
+
+```{r}
+df |> filter(variables == "Petal.Length") |>
+    ggplot(aes(x = values)) +
+    geom_density(aes(fill = Species, color = Species), alpha = 0.2, size = 1) +
+    scale_fill_brewer(palette = "Dark2") +
+    scale_color_brewer(palette = "Dark2") +
+    theme_bw()
+```
+
+
+

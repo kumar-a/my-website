@@ -1,0 +1,160 @@
+---
+title: Plotting rasters in R
+author: Abhishek Kumar
+date: '2021-10-24'
+slug: plotting-rasters-in-r
+categories:
+  - R
+  - raster
+tags:
+  - R
+  - Map
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2021-10-24T17:02:53+05:30'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+
+<div id="load-required-packages" class="section level2">
+<h2>load required packages</h2>
+<pre class="r"><code>library(raster)      # raster data
+library(rasterVis)   # raster data visualisation
+library(rgee)        # Google Earth Engine in R
+library(sf)          # spatial data handling
+library(tidyverse)   # general data wrangling and visualisation</code></pre>
+</div>
+<div id="getting-landcover-data-from-google-earth-engine" class="section level2">
+<h2>Getting Landcover data from Google Earth Engine</h2>
+<pre class="r"><code>## load the package rgee
+library(rgee)
+
+## initialize google earth engine in R
+ee_Initialize(drive = T)
+
+## define a region of interest
+roi &lt;- ee$Geometry$Rectangle(76.8100, 30.6676, 77.0010, 30.8084)
+
+## load and clip ESA WorldCover 2020 data
+landcover2020 &lt;- ee$ImageCollection(&quot;ESA/WorldCover/v100&quot;)$
+  # select the first image
+  first()$
+  # clip to region of interest
+  clip(roi)
+
+## Move results from Earth Engine to Drive
+task_img &lt;- ee_image_to_drive(
+  image = landcover2020,
+  folder = &quot;rgee_backup&quot;,
+  fileFormat = &quot;GEO_TIFF&quot;,
+  region = roi,
+  fileNamePrefix = &quot;landcover_2020&quot;
+)
+
+task_img$start()
+ee_monitoring(task_img)
+
+## Move results from Drive to local
+img &lt;- ee_drive_to_local(task = task_img, dsn = &quot;data/lc2020.tif&quot;)
+
+## deauthorise google drive
+googledrive::drive_deauth()
+
+## remove all variables from environment
+rm(list = ls())</code></pre>
+</div>
+<div id="base-r" class="section level2">
+<h2>base R</h2>
+<pre class="r"><code>mwls_lc &lt;- raster(&quot;data/lc2020.tif&quot;)
+plot(mwls_lc)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.svg" width="90%" style="display: block; margin: auto;" /><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-2.svg" width="90%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="lattice-levelplot" class="section level2">
+<h2>lattice levelplot</h2>
+<pre class="r"><code>library(raster)
+library(rasterVis)
+
+## data from ESA WorldCover 2020 
+mwls_lc &lt;- raster(&quot;data/lc2020.tif&quot;)
+
+levels(mwls_lc) &lt;- data.frame(
+    ID = c(seq(10, 60, 10), 80),
+    landcover = c(&quot;Trees&quot;, &quot;Shrubland&quot;, &quot;Grassland&quot;, &quot;Cropland&quot;, &quot;Built-up&quot;, 
+             &quot;Barren/Sparse \n Vegetation&quot;, &quot;Open water&quot;)
+    )
+
+levelplot(mwls_lc, att=&#39;landcover&#39;,
+          col.regions = c(&quot;#006400&quot;, &quot;#FFBB22&quot;, &quot;#FFFF4C&quot;, &quot;#F096FF&quot;, &quot;#FA0000&quot;, 
+                          &quot;#B4B4B4&quot;, &quot;#0064C8&quot;),
+          colorkey = list(height = 1, labels = list(cex = 1.2)))</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="ggplot" class="section level2">
+<h2>ggplot</h2>
+<pre class="r"><code>
+## data from ESA WorldCover 2020 
+mwls_lc &lt;- raster(&quot;data/lc2020.tif&quot;)
+
+## a function to convert raster to dataframe
+rasterdf &lt;- function(x, aggregate = 1){
+    resampleFactor &lt;- aggregate
+    inputRaster &lt;- x    
+    inCols &lt;- ncol(inputRaster)
+    inRows &lt;- nrow(inputRaster)
+    
+    # Compute numbers of columns and rows in the new raster for mapping
+    resampledRaster &lt;- raster(ncol = (inCols / resampleFactor),
+                              nrow = (inRows / resampleFactor))
+    
+    # Match to the extent of the original raster
+    extent(resampledRaster) &lt;- extent(inputRaster)
+   
+    # Resample data on the new raster
+    y &lt;- resample(inputRaster, resampledRaster, method=&#39;ngb&#39;)
+   
+    # Extract cell coordinates  
+    coords &lt;- xyFromCell(y, seq_len(ncell(y)))
+    dat &lt;- stack(as.data.frame(getValues(y)))
+    
+    # Add names - &#39;value&#39; for data, &#39;variable&#39; to indicate different raster layers
+    # in a stack
+    names(dat) &lt;- c(&#39;value&#39;, &#39;variable&#39;)
+    dat &lt;- cbind(coords, dat)
+    dat
+}
+
+## convert raster to data frame
+mwls_df &lt;- rasterdf(mwls_lc)
+
+## prepare legend
+LCcodes &lt;- c(seq(10, 90, 10), 95, 100)
+LCnames &lt;- c(&quot;Trees&quot;, &quot;Shrubland&quot;, &quot;Grassland&quot;, &quot;Cropland&quot;, &quot;Built-up&quot;, 
+             &quot;Barren/Sparse Vegetation&quot;, &quot;Snow and Ice&quot;, &quot;Open water&quot;,
+             &quot;Herbaceous wetland&quot;, &quot;Mangroves&quot;, &quot;Moss and lichen&quot;)
+LCcolors &lt;- attr(mwls_lc, &quot;legend&quot;)@colortable[LCcodes + 1]
+names(LCcolors) &lt;- as.character(LCcodes)
+
+## plot the map
+ggplot(data = mwls_df) +
+  geom_raster(aes(x = x, y = y, fill = as.character(value))) + 
+  scale_fill_manual(name = &quot;Land cover&quot;,
+                    values = LCcolors[-c(7, 9:11)],
+                    labels = LCnames[-c(7, 9:11)],
+                    na.translate = FALSE) +
+  coord_sf(expand = F) +
+  theme(axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        panel.background = element_rect(fill = &quot;white&quot;, color = &quot;black&quot;))</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/lc-1.svg" width="90%" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>
+## remove all variables from the environment
+rm(list = ls())</code></pre>
+</div>

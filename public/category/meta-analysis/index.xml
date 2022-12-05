@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>meta-analysis | Abhishek Kumar</title>
+    <link>https://akumar.netlify.app/category/meta-analysis/</link>
+      <atom:link href="https://akumar.netlify.app/category/meta-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <description>meta-analysis</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 Abhishek Kumar</copyright><lastBuildDate>Sat, 05 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://akumar.netlify.app/media/icon_hu63af8eaec43cac92558e0334cb2dff24_36198_512x512_fill_lanczos_center_3.png</url>
+      <title>meta-analysis</title>
+      <link>https://akumar.netlify.app/category/meta-analysis/</link>
+    </image>
+    
+    <item>
+      <title>Meta-analytic models in Ecology</title>
+      <link>https://akumar.netlify.app/post/meta-analytic-models-in-ecology/</link>
+      <pubDate>Sat, 05 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://akumar.netlify.app/post/meta-analytic-models-in-ecology/</guid>
+      <description>
+&lt;script src=&#34;https://akumar.netlify.app/post/meta-analytic-models-in-ecology/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;The overall aim of meta-analyses is to combine the effects or observations from different studies. There are three main types of meta-analytic models i.e., fixed-effect model (FEM), random-effects model (REM), and multilevel model (MLM), which are commonly used to compute the overall effect estimate in meta-analysis. Multilevel meta-analytic models account for non-independence due to studies, species and phylogenetic relatedness between species, which is common for ecological meta-analyses.&lt;/p&gt;
+&lt;div id=&#34;fixed-effects-model&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Fixed-effects model&lt;/h2&gt;
+&lt;p&gt;The most basic fixed-effect or common-effect model can be mathematically expressed as Equation &lt;a href=&#34;#eq:mod1&#34;&gt;(1)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34; id=&#34;eq:mod1&#34;&gt;\[\begin{equation}
+y_i = \mu + e_i; \quad 
+\textbf{e} \sim \mathcal{N}(0, \textbf{V})
+\tag{1}
+\end{equation}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;where, &lt;span class=&#34;math inline&#34;&gt;\(y_i\)&lt;/span&gt; is the effect size for the &lt;span class=&#34;math inline&#34;&gt;\(i^{th}\)&lt;/span&gt; study (with &lt;span class=&#34;math inline&#34;&gt;\(i = 1, \ldots, N_{studies}\)&lt;/span&gt;) with corresponding sampling variance &lt;span class=&#34;math inline&#34;&gt;\(v_i\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; is the overall meta-analytic mean, &lt;span class=&#34;math inline&#34;&gt;\(e_i\)&lt;/span&gt; is the sampling error for the &lt;span class=&#34;math inline&#34;&gt;\(i^{th}\)&lt;/span&gt; study, &lt;span class=&#34;math inline&#34;&gt;\(\textbf{e}\)&lt;/span&gt; is a &lt;span class=&#34;math inline&#34;&gt;\(1 \times N_{studies}\)&lt;/span&gt; column vector with the &lt;span class=&#34;math inline&#34;&gt;\(e_i\)&lt;/span&gt; values (which are assumed to be normally distributed with mean &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; and variance &lt;span class=&#34;math inline&#34;&gt;\(v_i\)&lt;/span&gt;), &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; is a column vector of zeros and &lt;span class=&#34;math inline&#34;&gt;\(\textbf{V}\)&lt;/span&gt; is an &lt;span class=&#34;math inline&#34;&gt;\(N_{studies} \times N_{studies}\)&lt;/span&gt; matrix with the &lt;span class=&#34;math inline&#34;&gt;\(v_i\)&lt;/span&gt; values along the diagonal. However, this model is overly simplistic as it assumes homogeneity between studies which is far from the reality, at least for ecological studies.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;random-effects-model&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Random-effects model&lt;/h2&gt;
+&lt;p&gt;In contrary to the fixed effect model, the assumptions of random-effects model are more realistic as it considers between-study heterogeneity. This model assumes that there is not only one actual effect size but a distribution of true effect sizes. According to this model, the observed effect size &lt;span class=&#34;math inline&#34;&gt;\(y_i\)&lt;/span&gt; deviates from the mean true effect size &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; for a single study &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; (with &lt;span class=&#34;math inline&#34;&gt;\(i = 1, \ldots , N_{studies}\)&lt;/span&gt;) by two error terms &lt;span class=&#34;math inline&#34;&gt;\(u_i\)&lt;/span&gt; (between-study heterogeneity) and &lt;span class=&#34;math inline&#34;&gt;\(e_i\)&lt;/span&gt; (sampling error). Thus, the random effects model can be expressed as Equation &lt;a href=&#34;#eq:mod2&#34;&gt;(2)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34; id=&#34;eq:mod2&#34;&gt;\[\begin{equation}
+y_i = \mu + u_i + e_i; \quad 
+\textbf{u} \sim \mathcal{N}(0, \sigma_u^2 \textbf{I}_u)
+\tag{2}
+\end{equation}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;where, &lt;span class=&#34;math inline&#34;&gt;\(u_i\)&lt;/span&gt; is the random effect corresponding to the &lt;span class=&#34;math inline&#34;&gt;\(i^{th}\)&lt;/span&gt; estimate, &lt;span class=&#34;math inline&#34;&gt;\(\textbf{u}\)&lt;/span&gt; is a &lt;span class=&#34;math inline&#34;&gt;\(1 \times N_{studies}\)&lt;/span&gt; column vector with the &lt;span class=&#34;math inline&#34;&gt;\(u_i\)&lt;/span&gt; values (which are assumed to be normally distributed with mean &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; and variance &lt;span class=&#34;math inline&#34;&gt;\(\sigma_u^2\)&lt;/span&gt;) and &lt;span class=&#34;math inline&#34;&gt;\(\textbf{I}_u\)&lt;/span&gt; is an &lt;span class=&#34;math inline&#34;&gt;\(N_{studies} \times N_{studies}\)&lt;/span&gt; identity matrix.&lt;/p&gt;
+&lt;p&gt;Although the random-effects model is commonly used in ecology, it did not take into consideration the non-independence among effect sizes. The non-independence can arise when the effect sizes are shared by studies or species (i.e., multiple effect sizes from the same study or species). Further, phylogenetic relatedness among species can also introduce non-independence among the effect size estimates. This issue of non-independence can be addressed by using a multilevel (hierarchical) meta-analytic model, which considers a random effect at each level of variability in effect sizes. Among the several factor for non-independence of effect sizes, the dependence due to studies, species and phylogenetic relatedness among species are common in ecology.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;random-effects-model-at-study-level&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Random-effects model at study level&lt;/h2&gt;
+&lt;p&gt;When a study provides more than one effect sizes, we have random effects at effect size (within studies) and study levels (between-study). To consider such non-independence due to studies, a multilevel model can be mathematically expressed as Equation &lt;a href=&#34;#eq:mod3&#34;&gt;(3)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34; id=&#34;eq:mod3&#34;&gt;\[\begin{equation}
+y_{ij} = \mu + u_{ij} + s_i + e_{ij}; \quad 
+\textbf{s} \sim \mathcal{N}(0, \sigma_s^2 \textbf{I}_s) 
+\tag{3}
+\end{equation}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;where, &lt;span class=&#34;math inline&#34;&gt;\(y_{ij}\)&lt;/span&gt; denotes the &lt;span class=&#34;math inline&#34;&gt;\(j^{th}\)&lt;/span&gt; effect in the &lt;span class=&#34;math inline&#34;&gt;\(i^{th}\)&lt;/span&gt; study (with &lt;span class=&#34;math inline&#34;&gt;\(j = 1, \ldots, N_i\)&lt;/span&gt;, where &lt;span class=&#34;math inline&#34;&gt;\(N_i\)&lt;/span&gt; is the number of effect sizes reported in the &lt;span class=&#34;math inline&#34;&gt;\(i^{th}\)&lt;/span&gt; study), &lt;span class=&#34;math inline&#34;&gt;\(v_{ij}\)&lt;/span&gt; are the corresponding sampling variances, and &lt;span class=&#34;math inline&#34;&gt;\(N_{total} = \sum_{i = 1}^{N_{studies}} N_i\)&lt;/span&gt; represents the total number of the effect sizes, &lt;span class=&#34;math inline&#34;&gt;\(u_{ij}\)&lt;/span&gt; is a random effect corresponding to the &lt;span class=&#34;math inline&#34;&gt;\(j^{th}\)&lt;/span&gt; effect size in the &lt;span class=&#34;math inline&#34;&gt;\(i^{th}\)&lt;/span&gt; study, &lt;span class=&#34;math inline&#34;&gt;\(s_i\)&lt;/span&gt; is a random effect at the study level, &lt;span class=&#34;math inline&#34;&gt;\(\textbf{u}\)&lt;/span&gt; is now a &lt;span class=&#34;math inline&#34;&gt;\(1 \times N_{total}\)&lt;/span&gt; column vector with the &lt;span class=&#34;math inline&#34;&gt;\(u_{ij}\)&lt;/span&gt; values, &lt;span class=&#34;math inline&#34;&gt;\(\textbf{s}\)&lt;/span&gt; is a &lt;span class=&#34;math inline&#34;&gt;\(1 \times N_{studies}\)&lt;/span&gt; column vector with the &lt;span class=&#34;math inline&#34;&gt;\(s_i\)&lt;/span&gt; values (which are assumed to be normally distributed with mean &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; and variance &lt;span class=&#34;math inline&#34;&gt;\(\sigma_s^2\)&lt;/span&gt;), and &lt;span class=&#34;math inline&#34;&gt;\(\textbf{I}_u\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\textbf{I}_s\)&lt;/span&gt; are &lt;span class=&#34;math inline&#34;&gt;\(N_{total} \times N_{total}\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(N_{studies} \times N_{studies}\)&lt;/span&gt; identity matrices, respectively.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;random-effects-model-at-species-level&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Random-effects model at species level&lt;/h2&gt;
+&lt;p&gt;However, the above model in Equation &lt;a href=&#34;#eq:mod3&#34;&gt;(3)&lt;/a&gt; did not considers non-independence due to species, which is prevalent in ecology and evolution. If effect sizes belong to different species, we can denote &lt;span class=&#34;math inline&#34;&gt;\(y_{ijk}\)&lt;/span&gt; as the &lt;span class=&#34;math inline&#34;&gt;\(j^{th}\)&lt;/span&gt; effect in the &lt;span class=&#34;math inline&#34;&gt;\(i^{th}\)&lt;/span&gt; study for the &lt;span class=&#34;math inline&#34;&gt;\(k^{th}\)&lt;/span&gt; species (with &lt;span class=&#34;math inline&#34;&gt;\(k = 1, \ldots, N_{species}\)&lt;/span&gt;). Then the multilevel model can include random effects at species level as expressed in Equation &lt;a href=&#34;#eq:mod4&#34;&gt;(4)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34; id=&#34;eq:mod4&#34;&gt;\[\begin{equation}
+y_{ijk} = \mu + u_{ij} + s_i + n_k + e_{ij}; \quad 
+\textbf{n} \sim \mathcal{N}(0, \sigma_n^2 \textbf{I}_n)
+\tag{4}
+\end{equation}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;where, &lt;span class=&#34;math inline&#34;&gt;\(n_k\)&lt;/span&gt; is a species-specific random effect, &lt;span class=&#34;math inline&#34;&gt;\(\textbf{n}\)&lt;/span&gt; is a &lt;span class=&#34;math inline&#34;&gt;\(1 \times N_{species}\)&lt;/span&gt; column vector with the &lt;span class=&#34;math inline&#34;&gt;\(n_k\)&lt;/span&gt; values (which are assumed to be normally distributed with mean &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; and between-species variance &lt;span class=&#34;math inline&#34;&gt;\(\sigma_n^2\)&lt;/span&gt;) and &lt;span class=&#34;math inline&#34;&gt;\(\textbf{I}_n\)&lt;/span&gt; has dimensions &lt;span class=&#34;math inline&#34;&gt;\(N_{species} × N_{species}\)&lt;/span&gt;. In Equation &lt;a href=&#34;#eq:mod4&#34;&gt;(4)&lt;/a&gt;, &lt;span class=&#34;math inline&#34;&gt;\(n_k\)&lt;/span&gt; is considered as crossed random effect instead of nested random effect.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;random-effects-model-at-phylogenetic-relatedness-level&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Random-effects model at phylogenetic relatedness level&lt;/h2&gt;
+&lt;p&gt;To account for non-independence due to phylogenetic relatedness, the multilevel model can be extended as Equation &lt;a href=&#34;#eq:mod5&#34;&gt;(5)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34; id=&#34;eq:mod5&#34;&gt;\[\begin{equation}
+y_{ijk} = \mu + u_{ij} + s_i + n_k + p_k + e_{ij}; \quad
+\textbf{p} \sim \mathcal{N}(0, \sigma_p^2 \textbf{A}) 
+\tag{5}
+\end{equation}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;where, &lt;span class=&#34;math inline&#34;&gt;\(p_k\)&lt;/span&gt; denotes the phylogenetic random effect for the &lt;span class=&#34;math inline&#34;&gt;\(k^{th}\)&lt;/span&gt; species,
+&lt;span class=&#34;math inline&#34;&gt;\(\textbf{p}\)&lt;/span&gt; is a &lt;span class=&#34;math inline&#34;&gt;\(1 \times N_{species}\)&lt;/span&gt; column vector with the &lt;span class=&#34;math inline&#34;&gt;\(p_k\)&lt;/span&gt; values (which are assumed to follow a multivariate normal distribution with mean &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; and variance–covariance matrix &lt;span class=&#34;math inline&#34;&gt;\(\sigma_p^2 \textbf{A}\)&lt;/span&gt;, where &lt;span class=&#34;math inline&#34;&gt;\(\sigma_p^2\)&lt;/span&gt; denotes between-species variance due to the phylogeny, and &lt;span class=&#34;math inline&#34;&gt;\(\textbf{A}\)&lt;/span&gt; is the &lt;span class=&#34;math inline&#34;&gt;\(N_{species} \times N_{species}\)&lt;/span&gt; phylogenetic correlation matrix).&lt;/p&gt;
+&lt;p&gt;The model in Equation &lt;a href=&#34;#eq:mod5&#34;&gt;(5)&lt;/a&gt; includes both non-phylogenetic (&lt;span class=&#34;math inline&#34;&gt;\(n_k\)&lt;/span&gt;) and phylogenetic(&lt;span class=&#34;math inline&#34;&gt;\(p_k\)&lt;/span&gt;) random effect due to species. Concerning the potential bias in estimated variances, we can simplify this model by removing the non-phylogenetic random effects as represented in Equation &lt;a href=&#34;#eq:mod6&#34;&gt;(6)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34; id=&#34;eq:mod6&#34;&gt;\[\begin{equation}
+y_{ijk} = \mu + u_{ij} + s_i + p_k + e_{ij}; \quad
+\textbf{p} \sim \mathcal{N}(0, \sigma_p^2 \textbf{A})
+\tag{6}
+\end{equation}\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
