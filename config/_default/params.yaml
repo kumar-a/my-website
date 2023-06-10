@@ -70,7 +70,6 @@ highlight: true
 
 highlight_languages:
   - r
-  - python
   - latex
 
 math: true
@@ -170,6 +169,7 @@ cms:
   branch: master
   local_backend: false
 
-icon:
-  pack:
-    ai: true
+    
+extensions:
+  academicons:
+    enable: true

@@ -35,27 +35,34 @@ social:
 - icon: envelope
   icon_pack: fas
   link: 'mailto:abhikumar.pu@gmail.com'
+  
 - icon: orcid
   icon_pack: ai
   link: https://orcid.org/0000-0003-2252-7623
-- icon: publons
+  
+- icon: researcherid
   icon_pack: ai
-  link: https://publons.com/researcher/1578460/abhishek-kumar/ 
+  link: http://www.researcherid.com/rid/T-1462-2018
+  
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.co.in/citations?user=ugmCylsAAAAJ&hl=en
+  
 - icon: researchgate
   icon_pack: ai
   link: https://www.researchgate.net/profile/Abhishek-Kumar-331
+  
+- icon: inaturalist
+  icon_pack: ai
+  link: https://www.inaturalist.org/people/abkumar
+  
 - icon: github
   icon_pack: fab
-  link: https://github.com/abhikumar86/
+  link: https://github.com/kumar-a/
+  
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/abhikumar86/
-- icon: semantic-scholar
-  icon_pack: ai
-  link: https://www.semanticscholar.org/author/2136071059 
 ---
 
 I am working as a senior research fellow at the [Department of Botany](https://botany.puchd.ac.in/) of Panjab University, Chandigarh. My research interests include the responses of ecological structure and functions to climate change. Currently, I am working on the elevational pattern of plant distributions and diversity in the Siwalik Ecosystem.
