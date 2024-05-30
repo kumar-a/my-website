@@ -5,7 +5,7 @@
     <link>https://akumar.netlify.app/project/</link>
       <atom:link href="https://akumar.netlify.app/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2023 Abhishek Kumar</copyright><lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2024 Abhishek Kumar</copyright><lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://akumar.netlify.app/media/icon_hu63af8eaec43cac92558e0334cb2dff24_36198_512x512_fill_lanczos_center_3.png</url>
       <title>Projects</title>
@@ -13,7 +13,18 @@
     </image>
     
     <item>
-      <title>Ecosystem Structure and Functions in Indian Siwalliks</title>
+      <title>Ecological Restoration of Coal Mine Spoils</title>
+      <link>https://akumar.netlify.app/project/restoration-ecology/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://akumar.netlify.app/project/restoration-ecology/</guid>
+      <description>
+
+
+</description>
+    </item>
+    
+    <item>
+      <title>Ecosystem Structure and Functions in Indian Siwaliks</title>
       <link>https://akumar.netlify.app/project/siwaliks/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       <guid>https://akumar.netlify.app/project/siwaliks/</guid>

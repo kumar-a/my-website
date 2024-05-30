@@ -5,7 +5,7 @@
     <link>https://akumar.netlify.app/talk/</link>
       <atom:link href="https://akumar.netlify.app/talk/index.xml" rel="self" type="application/rss+xml" />
     <description>Recent &amp; Upcoming Talks</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2023 Abhishek Kumar</copyright><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2024 Abhishek Kumar</copyright><lastBuildDate>Sun, 23 Feb 2020 10:00:00 +0000</lastBuildDate>
     <image>
       <url>https://akumar.netlify.app/media/icon_hu63af8eaec43cac92558e0334cb2dff24_36198_512x512_fill_lanczos_center_3.png</url>
       <title>Recent &amp; Upcoming Talks</title>
@@ -13,22 +13,14 @@
     </image>
     
     <item>
-      <title>Example Talk</title>
-      <link>https://akumar.netlify.app/talk/example/</link>
-      <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
-      <guid>https://akumar.netlify.app/talk/example/</guid>
-      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;Slides can be added in a few ways:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using Wowchemy&amp;rsquo;s &lt;a href=&#34;https://wowchemy.com/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Slides&lt;/em&gt;&lt;/a&gt; feature and link using &lt;code&gt;slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Upload&lt;/strong&gt; an existing slide deck to &lt;code&gt;static/&lt;/code&gt; and link using &lt;code&gt;url_slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Embed&lt;/strong&gt; your slides (e.g. Google Slides) or presentation video on this page using &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shortcodes&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Further event details, including &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;page elements&lt;/a&gt; such as image galleries, can be added to the body of this page.&lt;/p&gt;
+      <title>Plant response to climate change: Herbarium can act as a tool for future research on plant-climate interactions</title>
+      <link>https://akumar.netlify.app/talk/2020-nbri/</link>
+      <pubDate>Sun, 23 Feb 2020 10:00:00 +0000</pubDate>
+      <guid>https://akumar.netlify.app/talk/2020-nbri/</guid>
+      <description>
+
+
+&lt;p&gt;Abhishek Kumar presented a research poster titled &lt;strong&gt;Plant response to Climate change: Herbarium can act as a tool for future research on plant-climate interactions&lt;/strong&gt; at Second &lt;em&gt;National Conference on Climate Change: Agriculture, Biodiversity and Human Health&lt;/em&gt; organised by the Clean and Green Environmental Society (CGES), Lucknow and CSIR-National Botanical Research Institute (NBRI), Lucknow on February 22-23, 2020 held at CSIR-NBRI, Lucknow. This research poster has been awarded &lt;strong&gt;Third Prize&lt;/strong&gt;. In this study, the authors have evaluated the temporal changes in leaf morphological traits using herbarium specimens. We found temporal changes mainly in 3 parameters of leaf morphological traits (i.e. leaf area, leaf length and leaf shape) of the grasses except leaf width. The increase in leaf area was correlated with the average atmospheric concentration of the year in which a particular species was collected. In conclusion, we found that plants are already responding to changing environmental conditions that evidently observed in the herbarium specimens. Therefore, herbarium can prove to be a good tool to understand plant-climate interactions in future studies. Abhishek Kumar thanked his colleagues and co-authors for support and constructive suggestions during the research work.&lt;/p&gt;
 </description>
     </item>
     
@@ -38,7 +30,6 @@
       <pubDate>Fri, 07 Feb 2020 10:00:00 +0000</pubDate>
       <guid>https://akumar.netlify.app/talk/2020-psc-longowal/</guid>
       <description>
-&lt;script src=&#34;https://akumar.netlify.app/talk/2020-psc-longowal/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;Urban ecosystems of many tropics in the world often serve as the reservoir of exotic plants due to intentional introduction for ornamental and horticultural purposes. It is likely that some of these plants may escape their site of introduction and become invasive in the adjacent forest patches. Such plants can potentially modify important ecosystem functions like cycling of nutrients by adjusting their decomposition rates, which in turn may facilitate their increased abundance in the invaded ecosystem. In order to test this hypothesis, we investigated the decomposition rates of five native and five exotic (three invasive and two non-invasive) species by litter bag experiment for a single year. Results indicated that invasive exotic species exhibited a higher rate of decomposition, whereas, non-invasive exotic species exhibited slower rates as compared to native species. However, present study did not find any significant differences in overall decomposition rates of native and exotic species but these rates were significantly correlated with physical traits of the initial litter. Interestingly, specific leaf area of initial litter was a good predictor for decomposition rates in the present study. Our study confirms that invasive exotic plants oriented to maintain a higher grade of physical quality of litter than native and non-invasive exotic species which promotes their faster decomposition in the urban ecosystems. In conclusion, a higher decomposition rate possibly due to better physical quality of litter may facilitate the naturalisation and invasion of exotic plants irrespective of their origin.&lt;/p&gt;

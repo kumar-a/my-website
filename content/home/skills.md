@@ -20,30 +20,27 @@ feature:
   icon: r-project
   icon_pack: fab
   name: R
+  
 - description: 65%
   icon: chart-line
   icon_pack: fas
   name: Statistics
+  
 - description: 85%
   icon: mendeley
   icon_pack: ai
   name: Mendeley
-- description: 45%
-  icon: map-marked-alt
-  icon_pack: fas
-  name: ArcGIS
-- description: 65%
-  icon: file-pdf
-  icon_pack: fas
-  name: Adobe Acrobat
+  
 - description: 80%
   icon: file-word
   icon_pack: fas
   name: MS Word
+  
 - description: 75%
   icon: file-powerpoint
   icon_pack: fas
   name: MS PowerPoint
+  
 - description: 65%
   icon: file-excel
   icon_pack: fas

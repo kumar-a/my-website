@@ -1,11 +1,14 @@
 ---
-title: Plant distributions in Siwalliks of North-West India
+title: Plant distributions in Siwaliks of North-West India
+
 summary: ""
+
 tags:
 - Plant Ecology
 - Plant Distribution
 - Climate Change
 - Siwaliks
+
 date: "2018-01-01"
 
 # Optional external URL for project (replaces project detail page).
@@ -19,7 +22,8 @@ links:
 - icon: twitter
   icon_pack: fab
   name: Follow
-  url: https://twitter.com/kumar_abhi8
+  url: https://twitter.com/abkumar_
+  
 url_code: ""
 url_pdf: ""
 url_slides: ""
@@ -30,7 +34,7 @@ url_video: ""
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
-slides: example
+slides: ""
 ---
 
 Plant distributions are governed by several ecological and climatic factors. On going climate change is expected to alter the plant distributions, therefore this project aims to investigate the evidences of alteration in plant distributions.

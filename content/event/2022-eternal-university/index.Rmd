@@ -1,0 +1,57 @@
+---
+title: "Tracking spatiotemporal changes in tropical forest vegetation of Indian Siwaliks"
+
+abstract: The forests of Indian Siwaliks are facing severe anthropogenic (land-use change, habitat degradation and urbanisation) and natural pressures (soil erosion and climate change). These pressures pose a severe threat to this fragile ecosystem's biodiversity and sustainability. Since vegetation is a crucial component of terrestrial ecosystems, monitoring its dynamics becomes essential for the management and sustainability of bioresources. A major challenge in monitoring forest vegetation is the lack of historical data. Remotely sensed data acquired from satellites can potentially fill this gap. Therefore, we analysed the satellite image time series to detect the spatiotemporal changes in the vegetation. The Breaks For Additive Seasonal and Trend (BFAST) method and Moderate Resolution Imaging Spectroradiometer (MODIS) 16-day Normalized Difference Vegetation Index (NDVI) at a spatial resolution of 250 m were used to detect vegetation dynamics from 2001 to 2021. The changes in vegetation were estimated as the magnitude of breakpoints and year of breakpoints. Our results indicated small scale vegetation degradation, which can be thought of as early signals of forest degradation.
+
+tags:
+  - Siwaliks
+  - Remote Sensing
+  - Tropical Forest
+
+authors:
+  - admin
+  - Meenu Patil
+  - Pardeep Kumar
+  - Anand Narain Singh
+    
+event: "National Conference on Current Scientific Innovations & Research in Plant Biology"
+event_url: "https://eternaluniversity.edu.in/Events/csir-pb-2022"
+
+location: Eternal University
+
+address: 
+  city: Sirmaur
+  region: Himachal Pradesh
+  country: India
+  
+summary: "Oral Abstract #CSIR-PB-127, p. 150"
+
+date: "2022-05-27"
+date_end: ""
+all_day: true
+
+featured: false
+
+image:
+  caption: ""
+  focal_point: ""
+  
+links:
+- icon: twitter
+  icon_pack: fab
+  name: Follow
+  url: https://twitter.com/abkumar_
+  
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+
+projects: []
+
+slides: []
+
+publishDate: "2022-05-30"
+---
+
+

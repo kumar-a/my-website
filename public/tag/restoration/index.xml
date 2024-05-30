@@ -5,7 +5,7 @@
     <link>https://akumar.netlify.app/tag/restoration/</link>
       <atom:link href="https://akumar.netlify.app/tag/restoration/index.xml" rel="self" type="application/rss+xml" />
     <description>Restoration</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2023 Abhishek Kumar</copyright><lastBuildDate>Sat, 09 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2024 Abhishek Kumar</copyright><lastBuildDate>Sat, 09 Jul 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://akumar.netlify.app/media/icon_hu63af8eaec43cac92558e0334cb2dff24_36198_512x512_fill_lanczos_center_3.png</url>
       <title>Restoration</title>
@@ -14,9 +14,9 @@
     
     <item>
       <title>Comparative soil restoration potential of exotic and native woody plantations on coal mine spoil in a dry tropical environment of India: A case study</title>
-      <link>https://akumar.netlify.app/publication/ans-2022-ldd/</link>
+      <link>https://akumar.netlify.app/publication/2022-ans-ldd/</link>
       <pubDate>Sat, 09 Jul 2022 00:00:00 +0000</pubDate>
-      <guid>https://akumar.netlify.app/publication/ans-2022-ldd/</guid>
+      <guid>https://akumar.netlify.app/publication/2022-ans-ldd/</guid>
       <description>
 
 
@@ -31,9 +31,9 @@
     
     <item>
       <title>Ecological performances of exotic and native woody species on coal mine spoil in Indian dry tropical region</title>
-      <link>https://akumar.netlify.app/publication/ans-2022-ee/</link>
+      <link>https://akumar.netlify.app/publication/2022-ans-ee/</link>
       <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>https://akumar.netlify.app/publication/ans-2022-ee/</guid>
+      <guid>https://akumar.netlify.app/publication/2022-ans-ee/</guid>
       <description>
 
 
@@ -48,9 +48,9 @@
     
     <item>
       <title>Herbaceous vegetation under planted woody species on coal mine spoil acts as a source of organic matter</title>
-      <link>https://akumar.netlify.app/publication/pardeep-2022-actoec/</link>
+      <link>https://akumar.netlify.app/publication/2022-pardeep-actoec/</link>
       <pubDate>Mon, 03 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>https://akumar.netlify.app/publication/pardeep-2022-actoec/</guid>
+      <guid>https://akumar.netlify.app/publication/2022-pardeep-actoec/</guid>
       <description>
 
 
@@ -65,14 +65,29 @@
     
     <item>
       <title>Plant diversity development under planted woody species on coal mine spoil in a dry tropical environment, India: A case study</title>
-      <link>https://akumar.netlify.app/publication/pardeep-2020-jee/</link>
+      <link>https://akumar.netlify.app/publication/2020-pardeep-jee/</link>
       <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>https://akumar.netlify.app/publication/pardeep-2020-jee/</guid>
-      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+      <guid>https://akumar.netlify.app/publication/2020-pardeep-jee/</guid>
+      <description>
+
+
+&lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
   &lt;/div&gt;
 &lt;/div&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ecological Restoration of Coal Mine Spoils</title>
+      <link>https://akumar.netlify.app/project/restoration-ecology/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://akumar.netlify.app/project/restoration-ecology/</guid>
+      <description>
+
+
 </description>
     </item>
     
