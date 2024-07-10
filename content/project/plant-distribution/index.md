@@ -1,13 +1,13 @@
 ---
-title: Plant distributions in Siwaliks of North-West India
+title: Plant Distributions
 
 summary: ""
 
 tags:
-- Plant Ecology
-- Plant Distribution
-- Climate Change
-- Siwaliks
+  - Plant ecology
+  - Plant distribution
+  - Climate change
+  - Himalayas
 
 date: "2018-01-01"
 
@@ -15,7 +15,7 @@ date: "2018-01-01"
 external_link: ""
 
 image:
-  caption: Photo by Nabakumar_Khoirom on Flickr
+  caption: Oak tree line in Churdhar WLS. Photo by Abhishek Kumar.
   focal_point: Smart
 
 links:

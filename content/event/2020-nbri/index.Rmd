@@ -1,13 +1,14 @@
 ---
+slug: 2020-nbri-lucknow
+
 title: "Plant response to climate change: Herbarium can act as a tool for future research on plant-climate interactions"
 
 abstract: Understanding of plant response to the changing environmental conditions are of central importance for biodiversity conservation. In this study, we evaluated the temporal changes in leaf morphological traits using herbarium specimens. We found temporal changes mainly in 3 parameters of leaf morphological traits (i.e. leaf area, leaf length and leaf shape) of the grasses except leaf width. The increase in leaf area was correlated with the average atmospheric CO<sub>2</sub> concentration of the year in which a particular species was collected. In conclusion, we found that plants are already responding to changing environmental conditions that evidently observed in the herbarium specimens. Therefore, herbarium can prove to be a good tool to understand plant-climate interactions in future studies.
 
 tags:
-  - Climate Change
+  - Climate change
   - Herbarium
-  - Leaf Morphology
-  - Plant Ecology
+  - Leaf traits
 
 authors:
   - admin
@@ -17,7 +18,7 @@ authors:
   - Anand Narain Singh
 
 event: National Conference on Climate Change - Agriculture, Biodiversity and Human Health
-event_url: http://cgesindia.org/cges-nbri-national-conference/
+# event_url: 
 
 location: CSIR-National Botanical Research Institute (NBRI)
 
@@ -43,13 +44,17 @@ image:
   focal_point: "" 
 
 links:
-- icon: twitter
-  icon_pack: fab
-  name: Follow
-  url: https://twitter.com/abkumar_
+  - icon: twitter
+    icon_pack: fab
+    name: Follow
+    url: https://twitter.com/abkumar_
+  - icon: file
+    icon_pack: fas
+    name: pdf
+    url: "http://doi.org/10.13140/RG.2.2.36424.88326"
   
 url_code: ""
-url_pdf: "http://doi.org/10.13140/RG.2.2.36424.88326"
+url_pdf: ""
 url_slides: ""
 url_video: ""
 

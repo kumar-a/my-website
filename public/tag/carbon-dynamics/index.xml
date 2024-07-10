@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Carbon Dynamics | Abhishek Kumar</title>
+    <title>Carbon dynamics | Abhishek Kumar</title>
     <link>https://akumar.netlify.app/tag/carbon-dynamics/</link>
       <atom:link href="https://akumar.netlify.app/tag/carbon-dynamics/index.xml" rel="self" type="application/rss+xml" />
-    <description>Carbon Dynamics</description>
+    <description>Carbon dynamics</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2024 Abhishek Kumar</copyright><lastBuildDate>Tue, 09 Jan 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://akumar.netlify.app/media/icon_hu63af8eaec43cac92558e0334cb2dff24_36198_512x512_fill_lanczos_center_3.png</url>
-      <title>Carbon Dynamics</title>
+      <title>Carbon dynamics</title>
       <link>https://akumar.netlify.app/tag/carbon-dynamics/</link>
     </image>
     
@@ -34,11 +34,15 @@
       <link>https://akumar.netlify.app/publication/2021-deepika-tdf/</link>
       <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
       <guid>https://akumar.netlify.app/publication/2021-deepika-tdf/</guid>
-      <description>  &lt;div class=&#34;alert alert-note&#34;&gt;
+      <description>
+
+
+&lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to copy or import publication metadata into their reference management software.
   &lt;/div&gt;
 &lt;/div&gt;
+&lt;/p&gt;
 </description>
     </item>
     
@@ -47,11 +51,15 @@
       <link>https://akumar.netlify.app/publication/2021-pardeep-tdf/</link>
       <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
       <guid>https://akumar.netlify.app/publication/2021-pardeep-tdf/</guid>
-      <description>  &lt;div class=&#34;alert alert-note&#34;&gt;
+      <description>
+
+
+&lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to copy or import publication metadata into their reference management software.
   &lt;/div&gt;
 &lt;/div&gt;
+&lt;/p&gt;
 </description>
     </item>
     

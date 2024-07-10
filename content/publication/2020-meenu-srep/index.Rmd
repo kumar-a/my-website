@@ -5,13 +5,13 @@ title: "Comparative litter decomposability traits of selected native and exotic 
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here 
 # and it will be replaced with their full name and linked to their profile.
 authors:
-- Meenu Patil
-- admin
-- Pardeep Kumar
-- Navneet Kaur Cheema
-- Rupinder Kaur
-- Ram Chand Bhatti
-- Anand Narain Singh
+  - Meenu Patil
+  - admin
+  - Pardeep Kumar
+  - Navneet Kaur Cheema
+  - Rupinder Kaur
+  - Ram Chand Bhatti
+  - Anand Narain Singh
 
 # Author notes (optional)
 author_notes: ""
@@ -37,17 +37,19 @@ abstract: Exotic plants can potentially modify ecosystem functions like cycling 
 # Summary. An optional shortened abstract.
 summary: ""
 tags:
-- Litter Decomposition
-- Siwaliks
+  - Decomposition
+  - Invasion
+  - Siwaliks
+  - Urban
 
 # Display this page in the Featured widget?
 featured: false
 
 # Custom links (uncomment lines below)
 links:
-- name: "View at Publisher"
-  url: "https://www.nature.com/articles/s41598-020-64576-2"
-url_pdf: https://www.nature.com/articles/s41598-020-64576-2.pdf
+  - name: "View at Publisher"
+    url: "https://www.nature.com/articles/s41598-020-64576-2"
+url_pdf: "https://www.nature.com/articles/s41598-020-64576-2.pdf"
 url_code: ''
 url_dataset: ''
 url_poster: ''
@@ -69,7 +71,8 @@ image:
 #   E.g. `internal-project` references `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
 projects: 
-- siwaliks
+  - litter-decomposition
+  - siwaliks
 
 # Slides (optional).
 #   Associate this publication with Markdown slides.

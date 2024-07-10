@@ -10,11 +10,11 @@ organizations:
 bio: My research interests include plant ecology, restoration ecology and soil ecology.  
 
 interests:
-- Plant Ecology
-- Plant Distribution
-- Climate Change
-- Restoration Ecology
-- Soil Ecology
+- Plant ecology
+- Plant distribution
+- Litter decomposition
+- Restoration ecology
+- Research synthesis
 
 education:
   courses:
@@ -65,5 +65,5 @@ social:
   link: https://www.linkedin.com/in/abhikumar86/
 ---
 
-I am working as a senior research fellow at the [Department of Botany](https://botany.puchd.ac.in/) of Panjab University, Chandigarh. My research interests include the responses of ecological structure and functions to climate change. Currently, I am working on the elevational pattern of plant distributions and diversity in the Siwalik Ecosystem.
+I am working as a senior research fellow at the [Department of Botany](https://botany.puchd.ac.in/) of Panjab University, Chandigarh. My research interests include the responses of ecological structure and functions to climate change. Currently, I am working on the elevational pattern of plant distributions and diversity in the Western Himalayas.
 

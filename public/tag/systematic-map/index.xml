@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Systematic map | Abhishek Kumar</title>
+    <link>https://akumar.netlify.app/tag/systematic-map/</link>
+      <atom:link href="https://akumar.netlify.app/tag/systematic-map/index.xml" rel="self" type="application/rss+xml" />
+    <description>Systematic map</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2024 Abhishek Kumar</copyright><lastBuildDate>Mon, 14 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://akumar.netlify.app/media/icon_hu63af8eaec43cac92558e0334cb2dff24_36198_512x512_fill_lanczos_center_3.png</url>
+      <title>Systematic map</title>
+      <link>https://akumar.netlify.app/tag/systematic-map/</link>
+    </image>
+    
+    <item>
+      <title>Plant ecology in Indian Siwalik range: a systematic map and its bibliometric analysis</title>
+      <link>https://akumar.netlify.app/publication/2022-abhishek-troe/</link>
+      <pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://akumar.netlify.app/publication/2022-abhishek-troe/</guid>
+      <description>
+
+
+&lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to copy or import the publication metadata (citation) into your reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Research Synthesis</title>
+      <link>https://akumar.netlify.app/project/research-synthesis/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://akumar.netlify.app/project/research-synthesis/</guid>
+      <description>&lt;p&gt;Research synthesis brings together findings from multiple studies to resolve issues and identify research gaps. This project standardised methods bibliometrics, systematic maps, systematic reviews, and meta-analysis to analyse evidence for issues and theories in ecology and evolution.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

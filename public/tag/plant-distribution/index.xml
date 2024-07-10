@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Plant Distribution | Abhishek Kumar</title>
+    <title>Plant distribution | Abhishek Kumar</title>
     <link>https://akumar.netlify.app/tag/plant-distribution/</link>
       <atom:link href="https://akumar.netlify.app/tag/plant-distribution/index.xml" rel="self" type="application/rss+xml" />
-    <description>Plant Distribution</description>
+    <description>Plant distribution</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2024 Abhishek Kumar</copyright><lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://akumar.netlify.app/media/icon_hu63af8eaec43cac92558e0334cb2dff24_36198_512x512_fill_lanczos_center_3.png</url>
-      <title>Plant Distribution</title>
+      <title>Plant distribution</title>
       <link>https://akumar.netlify.app/tag/plant-distribution/</link>
     </image>
     
     <item>
-      <title>Plant distributions in Siwalliks of North-West India</title>
+      <title>Plant Distributions</title>
       <link>https://akumar.netlify.app/project/plant-distribution/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       <guid>https://akumar.netlify.app/project/plant-distribution/</guid>

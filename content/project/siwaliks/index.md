@@ -1,10 +1,10 @@
 ---
-title: Ecosystem Structure and Functions in Indian Siwaliks
+title: Indian Siwaliks
 
 summary: ""
 
 tags:
-- Siwaliks
+  - Siwaliks
 
 date: "2018-01-01"
 
@@ -12,14 +12,15 @@ date: "2018-01-01"
 external_link: ""
 
 image:
-  caption: Photo by Nabakumar Khoirom on Flickr
+  caption: Mixed forests in Morni hills. Photo by Abhishek Kumar.
   focal_point: Smart
 
 links:
-- icon: twitter
-  icon_pack: fab
-  name: Follow
-  url: https://twitter.com/abkumar_
+  - icon: twitter
+    icon_pack: fab
+    name: Follow
+    url: https://twitter.com/abkumar_
+  
 url_code: ""
 url_pdf: ""
 url_slides: ""
@@ -33,4 +34,4 @@ url_video: ""
 slides: ""
 ---
 
-Siwaliks is the youngest and southernmost foot hills of Himalayas. These youngest mountain ranges are considered as one of the most degraded ecosystems of the Himalayan landscape. Climate change, landslides, human encroachment, urbanisation and industrilisation are possessing serious threats to the ecosystem structure and functions in this region. This project aims to investigate the responses of ecosystem structure and functions to the climate change.
+Siwaliks refer to southernmost foot hills of the Himalayas. These youngest ranges are considered as one of the most degraded ecosystems of the Himalayan landscape. This project aims to investigate the ecosystem structure and functions in Siwaliks.

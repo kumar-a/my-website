@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Himalayas | Abhishek Kumar</title>
+    <link>https://akumar.netlify.app/tag/himalayas/</link>
+      <atom:link href="https://akumar.netlify.app/tag/himalayas/index.xml" rel="self" type="application/rss+xml" />
+    <description>Himalayas</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2024 Abhishek Kumar</copyright><lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://akumar.netlify.app/media/icon_hu63af8eaec43cac92558e0334cb2dff24_36198_512x512_fill_lanczos_center_3.png</url>
+      <title>Himalayas</title>
+      <link>https://akumar.netlify.app/tag/himalayas/</link>
+    </image>
+    
+    <item>
+      <title>Plant Distributions</title>
+      <link>https://akumar.netlify.app/project/plant-distribution/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://akumar.netlify.app/project/plant-distribution/</guid>
+      <description>&lt;p&gt;Plant distributions are governed by several ecological and climatic factors. On going climate change is expected to alter the plant distributions, therefore this project aims to investigate the evidences of alteration in plant distributions.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

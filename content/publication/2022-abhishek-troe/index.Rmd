@@ -1,15 +1,12 @@
 ---
 title: "Plant ecology in Indian Siwalik range: a systematic map and its bibliometric analysis"
 
-# Authors
-# If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here 
-# and it will be replaced with their full name and linked to their profile.
 authors:
-- admin
-- Meenu Patil
-- Pardeep Kumar
-- Manoj Kumar
-- Anand Narain Singh
+  - admin
+  - Meenu Patil
+  - Pardeep Kumar
+  - Manoj Kumar
+  - Anand Narain Singh
 
 # Author notes (optional)
 author_notes: ""
@@ -34,18 +31,20 @@ abstract: The Himalayan foothills or the Siwaliks have been considered as one of
 
 # Summary. An optional shortened abstract.
 summary: ""
+
 tags:
-- Plant Ecology
-- Siwaliks
-- Bibliometrics
+  - Bibliometrics
+  - Systematic map
+  - Siwaliks
 
 # Display this page in the Featured widget?
 featured: true
 
 # Custom links (uncomment lines below)
 links:
-- name: "SpringerLink"
-  url: "https://link.springer.com/article/10.1007/s42965-022-00229-x"
+  - name: "SpringerLink"
+    url: "https://link.springer.com/article/10.1007/s42965-022-00229-x"
+    
 url_pdf: "https://link.springer.com/content/pdf/10.1007/s42965-022-00229-x.pdf"
 url_code: ''
 url_dataset: ''
@@ -68,7 +67,8 @@ image:
 #   E.g. `internal-project` references `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
 projects: 
-- siwaliks
+  - siwaliks
+  - research-synthesis
 
 # Slides (optional).
 #   Associate this publication with Markdown slides.

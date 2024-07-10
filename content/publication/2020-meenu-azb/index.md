@@ -5,10 +5,10 @@ title: "Litter decomposability traits and their linkage with the cycling of nutr
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here 
 # and it will be replaced with their full name and linked to their profile.
 authors:
-- Meenu Patil
-- admin
-- Pardeep Kumar
-- Anand Narain Singh
+  - Meenu Patil
+  - admin
+  - Pardeep Kumar
+  - Anand Narain Singh
 
 # Author notes (optional)
 author_notes: ""
@@ -29,16 +29,14 @@ publication_types: ["2"]
 publication: "*Advances in Zoology and Botany, 8*(3), 269-277"
 publication_short: ""
 
-
-
 abstract: Litter decomposition is a key process that releases nutrients back to the ecosystem and therefore maintains the structure and functioning of the tropical forest ecosystems. The variations in the rate of litter decomposition among different ecosystems may be controlled by several factors including climate, litter quality and soil biota. However, the rapid change in the environmental conditions is expected to alter the rate of litter decomposition resulting in modified nutrient cycling. This modified cycling of the nutrient may disrupt the ecosystem structure and functions followed by the compromised quality of ecosystem services and functions. Thus, an improved understanding is needed about the factors affecting the decomposition rates to sustain biodiversity and ecosystem services in a changing environment. In this article, we tried to explain the various physical, chemical and biological factors that affect the litter decomposition and nutrient cycling in the forest ecosystem. To accomplish this, we synthesized the available information by carrying out a literature survey from available databases. We found that there is a shifting paradigm from climatic control to species traits control of litter decomposition rate and recently even moving beyond it considering the effects of soil biota and habitat effects too. Further, the rate of decomposition rate is linked with the cycling of nutrients and climatic effects are expected to cascade into ecosystem functions and their services. In order to get a clear picture, however, intensive studies are required to explore the coupling effects of climatic variation on the structure and functioning behaviour of the forest ecosystems to maintain biodiversity and their services in a changing environment.
 
 # Summary. An optional shortened abstract.
 summary: ""
 tags:
-- Litter Decomposition
-- Nutrient Cycling
-- Climate Change
+  - Decomposition
+  - Nutrient Cycling
+  - Climate Change
 
 # Display this page in the Featured widget?
 featured: false
@@ -68,14 +66,15 @@ image:
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `internal-project` references `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
-projects: []
+projects:
+  - litter-decomposition
 
 # Slides (optional).
 #   Associate this publication with Markdown slides.
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
-slides:
+slides: ""
 ---
 
 {{% callout note %}}

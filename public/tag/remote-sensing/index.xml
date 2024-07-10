@@ -1,22 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Remote Sensing | Abhishek Kumar</title>
+    <title>Remote sensing | Abhishek Kumar</title>
     <link>https://akumar.netlify.app/tag/remote-sensing/</link>
       <atom:link href="https://akumar.netlify.app/tag/remote-sensing/index.xml" rel="self" type="application/rss+xml" />
-    <description>Remote Sensing</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2024 Abhishek Kumar</copyright><lastBuildDate>Fri, 27 May 2022 00:00:00 +0000</lastBuildDate>
+    <description>Remote sensing</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2024 Abhishek Kumar</copyright><lastBuildDate>Wed, 03 Jul 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://akumar.netlify.app/media/icon_hu63af8eaec43cac92558e0334cb2dff24_36198_512x512_fill_lanczos_center_3.png</url>
-      <title>Remote Sensing</title>
+      <title>Remote sensing</title>
       <link>https://akumar.netlify.app/tag/remote-sensing/</link>
     </image>
     
     <item>
+      <title>Disturbance and vegetational structure in an urban forest of Indian Siwaliks: an ecological assessment</title>
+      <link>https://akumar.netlify.app/publication/2024-kumar-ema/</link>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://akumar.netlify.app/publication/2024-kumar-ema/</guid>
+      <description>
+
+
+&lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to copy or download citation for reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Tracking spatiotemporal changes in tropical forest vegetation of Indian Siwaliks</title>
-      <link>https://akumar.netlify.app/talk/tracking-spatiotemporal-changes-in-tropical-forest-vegetation-of-indian-siwaliks/</link>
+      <link>https://akumar.netlify.app/talk/2022-eternal-university/</link>
       <pubDate>Fri, 27 May 2022 00:00:00 +0000</pubDate>
-      <guid>https://akumar.netlify.app/talk/tracking-spatiotemporal-changes-in-tropical-forest-vegetation-of-indian-siwaliks/</guid>
+      <guid>https://akumar.netlify.app/talk/2022-eternal-university/</guid>
       <description>
 
 

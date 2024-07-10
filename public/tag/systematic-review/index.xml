@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Systematic review | Abhishek Kumar</title>
+    <link>https://akumar.netlify.app/tag/systematic-review/</link>
+      <atom:link href="https://akumar.netlify.app/tag/systematic-review/index.xml" rel="self" type="application/rss+xml" />
+    <description>Systematic review</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2024 Abhishek Kumar</copyright><lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://akumar.netlify.app/media/icon_hu63af8eaec43cac92558e0334cb2dff24_36198_512x512_fill_lanczos_center_3.png</url>
+      <title>Systematic review</title>
+      <link>https://akumar.netlify.app/tag/systematic-review/</link>
+    </image>
+    
+    <item>
+      <title>Research Synthesis</title>
+      <link>https://akumar.netlify.app/project/research-synthesis/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://akumar.netlify.app/project/research-synthesis/</guid>
+      <description>&lt;p&gt;Research synthesis brings together findings from multiple studies to resolve issues and identify research gaps. This project standardised methods bibliometrics, systematic maps, systematic reviews, and meta-analysis to analyse evidence for issues and theories in ecology and evolution.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
