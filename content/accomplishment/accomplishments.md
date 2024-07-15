@@ -11,14 +11,32 @@ date_format: 02 Jan 2006
 
 item:
 
+- certificate_url: https://drive.google.com/file/d/1oUWPfQPFdsCQ-eRap5EnOYH09CJhNsYc/view?usp=drive_link
+  date_end: ""
+  date_start: "2024-06-24"
+  description: "This online course (ID: E-5VNXR1) provided an introduction to journal peer review and the academic publishing process. It covered different types of peer review, research integrity issues, structuring peer review reports, and responding to peer reviewer comments."
+  organization: Clarivate - Web of Science Academy
+  organization_url: https://clarivate.com/web-of-science-academy/
+  title: "An Introduction to Peer Review"
+  url: "https://webofscienceacademy.clarivate.com/learn/courses/119/an-introduction-to-peer-review"
+
 - certificate_url: https://drive.google.com/file/d/1ucb37uWyBSEaQWCRgrBWo7IeG-ACiiu5/view?usp=sharing
   date_end: "2022-07-17"
   date_start: "2022-07-11"
-  description: This workshop included several sessions on foundations of for study design and statistical analysis in ecology. It also illustrated the applications of `R` programming for analysis and visualisation of ecological data.
+  description: This workshop included several sessions on foundations of study design and statistical analysis in ecology. It also illustrated the applications of `R` programming for analysis and visualisation of ecological data.
   organization: Centre for Ecological Sciences - Indian Institute of Science
   organization_url: https://ces.iisc.ac.in/
   title: "Quantitative Thinking in Ecology"
   url: "https://ces.iisc.ac.in/?q=node/1050"
+  
+- certificate_url: "https://drive.google.com/file/d/1w2W26P8HU_b7-Z8twLnXX6jyT68AmnXn/view?usp=drive_link"
+  date_end: ""
+  date_start: "2022-06-14"
+  description: "This online course (ID: E-602DN0) taught what to look for in each section of a typical research article manuscript and provided a peer review template to structure the final review report."
+  organization: Clarivate - Web of Science Academy
+  organization_url: "https://clarivate.com/web-of-science-academy/"
+  title: "Reviewing in the Sciences"
+  url: "https://webofscienceacademy.clarivate.com/learn/courses/128/reviewing-in-the-sciences"
 
 - certificate_url: https://drive.google.com/file/d/1Gydooj3gT8RnmAJdTfkhiLOguwXcd-Xx/view?usp=sharing
   date_end: "2021-08-19"
@@ -28,21 +46,11 @@ item:
   organization_url: https://appliedsciences.nasa.gov/
   title: "Species Distribution Modeling with Remote Sensing"
   url: "https://appliedsciences.nasa.gov/join-mission/training/english/arset-species-distribution-modeling-remote-sensing"
-
-- certificate_url: https://www.coursera.org/verify/VLBADS4LN2QQ
-  date_end: ""
-  date_start: "2020-12-15"
-  description: This 1-hour online guided project included data manipulation using formulas and functions in Google Spreadsheets.
-  organization: Coursera - Project Network
-  organization_url: https://www.coursera.org
-  title: 'Data Manipulation and Business Analysis using Spreadsheets'
-  url: "https://www.coursera.org/projects/data-manipulation-and-business-analysis-using-spreadsheets"
-  
   
 - certificate_url: https://drive.google.com/file/d/19ZZidA2sf0dr4PebJ11T2DBWyb6A3nU7/view?usp=sharing
   date_end: "2020-12-21"
   date_start: "2020-12-09"
-  description: ""
+  description: "It included more 15 sessions to introduce the theory, tools and case-studies for assessing ecosystem services in the Western Himalayas."
   organization: Ashoka Trust for Research in Ecology and the Environment
   organization_url: https://www.atree.org/
   title: 'Ecosystem Approaches to Food and Water Security for Rural Wellbeing - Western Himalayan Region'
@@ -197,8 +205,8 @@ item:
   date_end: "2020-11-25"
   date_start: "2020-05-01"
   description: |2-
-    This 10-course online specialization comprised of two specializations of 5-course each, namely Data Science: Foundations using `R` and Data Science: Statistics and Machine Learning covered the foundational concepts and tools for the data science pipeline including how to use the tools of the trade (The Data Scientist’s Toolbox) think analytically about complex problems (`R` Programming), manage large data sets (Getting and Cleaning Data), create visualizations (Exploratory Data Analysis), and publish reproducible analyses (Reproducible Research) This Specialization covers the concepts and tools you'll need throughout the entire data science pipeline, from asking the right kinds of questions to making inferences and publishing results. In the final Capstone Project, you’ll apply the skills learned by building a data product using real-world data. At completion, students will have a portfolio demonstrating their mastery of the material.
-      * The Data Scientist’s Toolbox
+    This 10-course online specialization covered the concepts and tools for the entire data science pipeline, from asking the right kinds of questions to making inferences and publishing results. The first part, *Data Science: Foundations using `R`*, demonstrated the use of `R` to clean, analyze, and visualize data, and the use of `GitHub` platform to manage data science projects and publish reproducible analyses. The second part, *Data Science: Statistics and Machine Learning* covered the foundational concepts and applications of regression analysis, least squares, and inference using regression models. The final Capstone Project applied the skills learned by building a data product using real-world data. 
+      * The Data Scientist's Toolbox
       * `R` Programming
       * Getting and Cleaning Data
       * Exploratory Data Analysis

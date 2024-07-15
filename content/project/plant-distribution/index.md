@@ -1,13 +1,13 @@
 ---
-title: Plant Distributions
+title: Plant Distribution
 
 summary: ""
 
 tags:
-  - Plant ecology
-  - Plant distribution
   - Climate change
+  - Elevational gradient
   - Himalayas
+  - Plant distribution
 
 date: "2018-01-01"
 
@@ -19,10 +19,10 @@ image:
   focal_point: Smart
 
 links:
-- icon: twitter
-  icon_pack: fab
-  name: Follow
-  url: https://twitter.com/abkumar_
+  - icon: twitter
+    icon_pack: fab
+    name: Follow
+    url: https://twitter.com/abkumar_
   
 url_code: ""
 url_pdf: ""
