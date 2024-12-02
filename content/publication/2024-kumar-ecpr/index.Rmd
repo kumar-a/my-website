@@ -1,0 +1,75 @@
+---
+title: "Determinants of Plant Species Richness along Elevational Gradients: Insights with Climate, Energy and Water--Energy Dynamics"
+
+authors:
+  - admin
+  - Meenu Patil
+  - Pardeep Kumar
+  - Anand Narain Singh
+
+# Author notes (optional)
+author_notes: ""
+
+date: "2024-12-02"
+doi: "10.1186/s13717-024-00563-z"
+
+# Schedule page publish date
+publishDate: "2024-12-02"
+
+# Publication type.
+# Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
+# 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
+# 7 = Thesis; 8 = Patent
+publication_types: ["2"]
+
+# Publication name and optional abbreviated publication name.
+publication: "*Ecological Processes, 13*, 86"
+publication_short: ""
+
+abstract: "**Background** Understanding the patterns and processes of species distributions has long remained a central focus of biogeographical and ecological research. While the evidence for elevational patterns in species richness is widespread, our understanding of underlying causes and mechanisms remains limited. Therefore, this study aimed to entangle the influence of environmental variables on plant species richness along elevational gradients in the Western Himalayas. <br> **Methods** We compiled elevational distribution for about 1150 vascular plants using the published literature and available database. The species richness was estimated in 100-m elevational bands using the range interpolation method. We used the generalised linear model and structural equation modelling (SEM) framework to identify the direct and indirect effects of climatic factors on species richness. <br> **Results** Our results indicated that primary environmental correlates of species richness varied with elevational gradients. Climatic variables combined with energy and water availability were more important than the topographic heterogeneity. Further, the direct and interaction effects of climatic variables were more substantial than their indirect effects. The indirect effects of climate are more strongly mediated by water-energy dynamics than the energy alone. <br> **Conclusions** Overall, our findings emphasise the importance of considering direct effects and interactions among environmental variables while studying the underlying mechanisms governing elevational biodiversity gradients. Species richness appeared to be shaped by climatic tolerances rather than habitat heterogeneity at regional scales. This information can have implications for biodiversity dynamics under environmental change."
+
+# Summary. An optional shortened abstract.
+summary: ""
+
+tags:
+  - Biodiversity
+  - Chail WLS
+  - Churdhar WLS
+  - Elevational gradient
+  - Himalayas
+  - Morni hills
+  - Species richness
+
+# Display this page in the Featured widget?
+featured: true
+
+# Custom links (uncomment lines below)
+links:
+  - name: "SpringerOpen"
+    url: "https://ecologicalprocesses.springeropen.com/articles/10.1186/s13717-024-00563-z"
+    
+url_pdf: "https://ecologicalprocesses.springeropen.com/counter/pdf/10.1186/s13717-024-00563-z.pdf"
+url_code: "https://doi.org/10.6084/m9.figshare.24056943"
+# url_dataset: ''
+# url_poster: ''
+# url_project: ''
+# url_slides: ''
+# url_source: ''
+# url_video: ''
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder. 
+image:
+  caption: 'Image credit: Authors' 
+  focal_point: ""
+  preview_only: false
+
+projects:
+  - plant-distribution
+
+slides: ""
+---
+  
+{{% callout note %}}
+Click the *Cite* button above to copy or download citation for reference management software.
+{{% /callout %}}

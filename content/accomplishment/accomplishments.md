@@ -11,6 +11,15 @@ date_format: 02 Jan 2006
 
 item:
 
+- certificate_url: https://drive.google.com/file/d/1xm3PGpekG2AccH2AUMQdFqtDxV-SsPYy/view?usp=drive_link
+  date_end: ""
+  date_start: "2024-07-26"
+  description: "This online course (ID: E-Q07J4V) provided an introduction to best practices for citing other research and avoid citation manipulation. It covered how, when, and where to reference other research."
+  organization: Clarivate - Web of Science Academy
+  organization_url: https://clarivate.com/web-of-science-academy/
+  title: "Good Citation Behavior"
+  url: "https://webofscienceacademy.clarivate.com/learn/courses/114/good-citation-behavior"
+
 - certificate_url: https://drive.google.com/file/d/1oUWPfQPFdsCQ-eRap5EnOYH09CJhNsYc/view?usp=drive_link
   date_end: ""
   date_start: "2024-06-24"
