@@ -5,12 +5,29 @@
     <link>https://akumar.netlify.app/tag/himalayas/</link>
       <atom:link href="https://akumar.netlify.app/tag/himalayas/index.xml" rel="self" type="application/rss+xml" />
     <description>Himalayas</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2024 Abhishek Kumar</copyright><lastBuildDate>Sat, 15 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2024 Abhishek Kumar</copyright><lastBuildDate>Mon, 02 Dec 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://akumar.netlify.app/media/icon_hu63af8eaec43cac92558e0334cb2dff24_36198_512x512_fill_lanczos_center_3.png</url>
       <title>Himalayas</title>
       <link>https://akumar.netlify.app/tag/himalayas/</link>
     </image>
+    
+    <item>
+      <title>Determinants of Plant Species Richness along Elevational Gradients: Insights with Climate, Energy and Water--Energy Dynamics</title>
+      <link>https://akumar.netlify.app/publication/2024-kumar-ecpr/</link>
+      <pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://akumar.netlify.app/publication/2024-kumar-ecpr/</guid>
+      <description>
+
+
+&lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to copy or download citation for reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Patterns and determinants of plant species richness along elevational gradient in Western Himalayas</title>
@@ -24,7 +41,7 @@
     </item>
     
     <item>
-      <title>Plant Distributions</title>
+      <title>Plant Distribution</title>
       <link>https://akumar.netlify.app/project/plant-distribution/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       <guid>https://akumar.netlify.app/project/plant-distribution/</guid>
