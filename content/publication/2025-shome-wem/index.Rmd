@@ -1,0 +1,70 @@
+---
+title: "Assessing the importance of Indian wetland plants for multiple ecosystem services using trait‑service linkage framework"
+
+authors:
+  - Arkajyoti Shome
+  - admin
+  - Anand Narain Singh
+  - Shyam S. Phartyal
+
+# Author notes (optional)
+author_notes: ""
+
+date: "2025-02-19"
+doi: "10.1007/s11273-025-10039-2"
+
+# Schedule page publish date
+publishDate: "2025-02-20"
+
+# Publication type.
+# Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
+# 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
+# 7 = Thesis; 8 = Patent
+publication_types: ["2"]
+
+# Publication name and optional abbreviated publication name.
+publication: "*Wetlands Ecology and Management, 33*(2), 23"
+publication_short: ""
+
+abstract: Wetlands are highly productive ecosystems providing valuable natural resources and ecosystem services, but human activities can disrupt these ecosystem services. Understanding the species that maximise ecosystem services is crucial for effective wetland management under climate change. This study assessed the importance of wetland plants for multiple ecosystem services by analysing nine ecosystem services (three each from provisioning, regulating and cultural services) for 32 Indian wetland plants. Similarity among species based on multiple services was estimated, and species-service groups were identified by applying network analysis. Our results suggested that each species is associated with delivering different proportions of various ecosystem services. However, there were no apparent differences in ecosystem services of native, introduced, and invasive wetland plants (F = 1.989, p = 0.056), though some species corresponded to a particular set of ecosystem services. For example, Pistia stratiotes, Pontederia crassipes, and Lemna minor are observed to provide a similar set of ecosystem services, while the former two species are invasive. Through the bipartite modular network, it was well illustrated in the case of ecosystem restoration that species selection can be beneficial to maintain or maximise the desired ecosystem services. For example, the ecosystem services of some invasive plants, such as Alternanthera sessilis and Echinochloa crus-galli can be compensated by their alternative native species, such as Trapa natans and Eleocharis geniculata, respectively. Therefore, removing such invasive species from these sets would not affect the overall multiple services of wetlands. Thus, information on species-service relationships can be valuable for managing and restoring wetlands.
+
+# Summary. An optional shortened abstract.
+summary: ""
+
+tags:
+  - Biodiversity
+  - Ecosystem services
+  - Wetlands
+
+# Display this page in the Featured widget?
+featured: false
+
+# Custom links (uncomment lines below)
+links:
+  - name: "SpringerLink"
+    url: "https://link.springer.com/article/10.1007/s11273-025-10039-2"
+    
+url_pdf: "https://link.springer.com/article/10.1007/s11273-025-10039-2"
+# url_code: ""
+# url_dataset: ''
+# url_poster: ''
+# url_project: ''
+# url_slides: ''
+# url_source: ''
+# url_video: ''
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder. 
+image:
+  caption: 'Image credit: Authors' 
+  focal_point: ""
+  preview_only: false
+
+projects: ""
+
+slides: ""
+---
+  
+{{% callout note %}}
+Click the *Cite* button above to copy or download citation for reference management software.
+{{% /callout %}}
