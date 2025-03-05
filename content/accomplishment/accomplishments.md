@@ -11,6 +11,16 @@ date_format: 02 Jan 2006
 
 item:
 
+- certificate_url: "https://drive.google.com/file/d/1HT4DBjcyCpu01PpIBshJ7qfGeUOuHMSr/view?usp=drive_link"
+  date_end: "2025-01-17"
+  date_start: "2025-01-06"
+  description: "This Winter School introduced mathematical models for population dynamics and species interactions, including generalised Lotka-Volterra models and consumer-resource models. It also introduced the mathematical tools for predicting the stability and resilience of ecosystem dynamics, including stochastic processes, bistability and tipping points in ecological systems."
+  organization: TIFR - International Centre for Theoretical Sciences
+  organization_url: "https://www.icts.res.in/"
+  title: "ICTP-ICTS Winter School on Quantitative Systems Biology"
+  url: "https://www.icts.res.in/program/qsb2024"
+
+
 - certificate_url: https://drive.google.com/file/d/1xm3PGpekG2AccH2AUMQdFqtDxV-SsPYy/view?usp=drive_link
   date_end: ""
   date_start: "2024-07-26"
