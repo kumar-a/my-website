@@ -24,12 +24,24 @@ date_format: Jan 2006
 
 experience:
   - title: Senior Research Fellow
+    company: ICAR National Bureau of Plant Genetic Resources (NBPGR)
+    company_url: 'https://nbpgr.org.in/nbpgr2023/'
+    company_logo: nbpgr-logo
+    location: New Delhi, India
+    date_start: '2025-02-20'
+    date_end: ''
+    description: |2-
+        Responsibilities include:
+        * Species distribution modelling
+        * Preparing and publishing peer-reviewed publications
+        
+  - title: Senior Research Fellow
     company: Panjab University, Chandigarh
     company_url: 'https://puchd.ac.in/'
     company_logo: pu-logo
     location: Chandigarh, India
     date_start: '2019-12-01'
-    date_end: ''
+    date_end: '2024-12-31'
     description: |2-
         Responsibilities include:
         

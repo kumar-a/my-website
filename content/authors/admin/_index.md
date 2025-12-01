@@ -4,8 +4,10 @@ superuser: true
 role: Senior Research Fellow
 
 organizations:
-  - name: Panjab University, Chandigarh
-    url: https://www.puchd.ac.in/
+  # - name: Panjab University, Chandigarh
+  #   url: https://www.puchd.ac.in/
+  - name: ICAR–NBPGR, New Delhi
+    url: https://nbpgr.org.in/nbpgr2023/
   
 bio: My research interests include plant ecology, restoration ecology and soil ecology.  
 
@@ -15,12 +17,13 @@ interests:
   - Litter decomposition
   - Restoration ecology
   - Research synthesis
+  - Open science
 
 education:
   courses:
     - course: PhD in Botany
       institution: Panjab University, Chandigarh
-      year: Present
+      year: 2024
     - course: MSc in Botany
       institution: Panjab University, Chandigarh
       year: 2017
@@ -63,5 +66,4 @@ social:
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
-I am working as a senior research fellow in the [Department of Botany](https://botany.puchd.ac.in/) at Panjab University, Chandigarh. My research interests include the responses of ecological structure and functions to climate change. Currently, I am working on the elevational pattern of plant distributions and diversity in the Western Himalayas.
-
+I am working as a senior research fellow in the *National Mission for Sustaining Himalayan Ecosystem (NMSHE)* project at [ICAR–National Bureau of Plant Genetic Resources, New Delhi](https://nbpgr.org.in/nbpgr2023/). My research broadly focuses to understand the ecosystem structure and functions in the context of global environmental change. Guided by the values of collaboration, integrity, and open science, I aim to contribute meaningfully to ecological research and inform evidence-based management strategies.

@@ -16,32 +16,31 @@ site_type: Person
 local_business_type: ''
 org_name: ''
 description: ''
-twitter: 'https://twitter.com/abkumar_'
+twitter: 'https://x.com/abkumar_'
 
 # Contact (edit or remove options as required)
 
 email: abhikumar.pu@gmail.com
 phone: ''
 address:
-  street: 223 Department of Botany
-  city: Panjab University
-  region: Chandigarh
-  postcode: '160014'
+  street: Lab 17, NBPGR (Old Building)
+  city: Pusa Campus
+  region: New Delhi
+  postcode: '110012'
   country: India
   country_code: IN
 coordinates:
-  latitude: '30.762255'
-  longitude: '76.767743'
-directions: Enter Building and take the stairs to 223 on Second Floor
+  latitude: '28.630939386974283' ##'30.762255', 
+  longitude: '77.15395340327929' ##'76.767743'
+directions: Enter building, take the stairs to Lab 17 on First Floor
 office_hours:
   - 'Monday to Friday 10:00 to 17:00'
-  - 'Saturday 12:00 to 16:00'
 appointment_url: ''
 contact_links:
   - icon: twitter
     icon_pack: fab
     name: abkumar_
-    link: 'https://twitter.com/abkumar_'
+    link: 'https://x.com/abkumar_'
   - icon: facebook
     icon_pack: fab
     name: abhikumar86
