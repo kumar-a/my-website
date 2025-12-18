@@ -1,5 +1,5 @@
 ---
-title: "Siwalik, Shivalik, Shiwalik or Sivalik: Which one is an appropriate term for the foothills of Himalayas?"
+title: "Shivalik, Siwalik, Shiwalik or Sivalik: Which one is an appropriate term for the foothills of Himalayas?"
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here 
