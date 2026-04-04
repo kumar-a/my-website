@@ -11,6 +11,16 @@ date_format: 02 Jan 2006
 
 item:
 
+- certificate_url: "https://drive.google.com/file/d/19e8C2pdVq8KxflLcXwY_spl-qWYqvSkq/view?usp=drive_link"
+  date_end: "2026-02-26"
+  date_start: "2026-02-24"
+  description: "This training covered the supervised and unsupervised classification models implemented in the R statistical environment. It also focused on visualisation of land cover land use change metrics and produce maps."
+  organization: NASA - ARSET
+  organization_url: "https://www.earthdata.nasa.gov/"
+  title: "Visualizing Land Cover and Land Use Change with NASA Satellite Imagery"
+  url: "https://www.earthdata.nasa.gov/learn/trainings/visualizing-land-cover-land-use-change-nasa-satellite-imagery"
+
+
 - certificate_url: "https://drive.google.com/file/d/1HT4DBjcyCpu01PpIBshJ7qfGeUOuHMSr/view?usp=drive_link"
   date_end: "2025-01-17"
   date_start: "2025-01-06"
