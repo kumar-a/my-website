@@ -2,7 +2,6 @@
 title: "Data- and code-archiving in the British Ecological Society journals: Present status and recommendations for future improvements"
 
 authors: 
-  
   - Natalie Cooper
   - the BES Data and Code Hackathon Group
 
@@ -13,7 +12,7 @@ publishDate: "2026-06-02"
 
 publication_types: ["2"]
 
-publication: "*Methods in Ecology and Evolution*"
+publication: "*Methods in Ecology and Evolution, 17*(7), 1954--1966"
 
 abstract: "1. Data- and code-archiving are important components of open science, as both make research more transparent, reproducible, accountable and credible, allowing future researchers to build on previous work. Despite progress in implementing data- and code-archiving policies in journals publishing ecology and evolution research, issues remain. To be more useful to future researchers, archived data and code must not only be archived but also meet good practice standards.  
 
