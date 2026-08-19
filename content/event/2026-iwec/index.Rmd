@@ -1,0 +1,68 @@
+---
+title: "Detecting ecological degradation using NDVI breakpoints in Western Himalayas"
+
+slug: "2026-iwec"
+
+date: "2026-07-10T11:30:00Z"
+
+event_url: https://iwecindia.in/
+
+location: Ashoka University
+
+address:
+  street: Rai
+  city: Sonipat
+  region: Haryana
+  postcode: '131021'
+  country: India
+
+summary: 'Symposium Abstract #S1-04, p.12'
+
+abstract: "Human-mediated pressures are altering the structure and functioning of mountain ecosystems leading to ecological degradation. However, detecting ecological degradation remained challenging due to limited availability long-term observations. We analysed satellite-derived proxies of vegetation dynamics to detect large scale signals of ecological degradation in the Western Himalayas. Specifically, we used BFAST (Breaks For Additive Season and Trend) algorithm to identify breakpoints in the MODIS NDVI time series data (2001 to 2025). Our results showed variation in magnitude, timing, and break types in vegetation dynamics. These preliminary results indicate higher degradation at lower elevations, suggesting greater anthropogenic pressure. Our study highlights that integrating breakpoints detection with spectral diversity can provide a framework to detect ecological degradation in data-poor regions."
+
+event: Indian Wildlife Ecology Conference (IWEC)
+
+all_day: false
+
+publishDate: "2026-06-13T00:00:00Z"
+
+authors:
+  - admin
+  - Meenu Patil
+  - Anand Narain Singh
+
+tags:
+  - Chail WLS
+  - Churdhar WLS
+  - Himalayas
+  - Morni hills
+  - Siwaliks
+  - Species richness
+  - Tropical forest
+
+featured: false
+
+image:
+  caption: ''
+  focal_point: ''
+
+links:
+  - icon: certificate
+    icon_pack: fa
+    name: Certificate
+    url: "https://drive.google.com/file/d/1Uj7rNLHbOAioidxRT1_R2jqrCAbWhWyU/view?usp=drive_link"
+    
+  - icon: twitter
+    icon_pack: fab
+    name: Follow
+    url: https://twitter.com/abkumar_
+
+url_code: ''
+url_pdf: ''
+url_slides: ''
+url_video: ''
+slides: ''
+
+projects: 
+  - siwaliks
+---

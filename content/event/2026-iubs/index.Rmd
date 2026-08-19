@@ -1,0 +1,65 @@
+---
+title: "Climate-driven elevational range dynamics of dominant trees in the Western Himalayas"
+
+slug: "2026-iubs"
+
+date: "2026-06-12T15:15:00Z"
+
+event_url: https://iubsga2026.org/
+
+location: Indian Institute of Science (IISc)
+
+address:
+  city: Bengaluru
+  region: Karnataka
+  postcode: '560012'
+  country: India
+
+summary: 'Symposium Abstract #40'
+
+abstract: "Understanding species distributions in response to climate change is crucial for developing effective biodiversity management plans. However, lack of historical data challenges our ability to monitor distribution dynamics, which can be highly variable and species-specific. This study aims to investigate the elevational range dynamics of dominant tree species under projected climatic conditions in the Western Himalayas. Based on a compiled database of species occurrences, we developed ensemble species distribution models to predict habitat suitability for current (2010) and future climatic scenarios (2040, 2070, and 2100). Then, we estimated the elevation for trailing edge, optimum range, and leading edge from the habitat suitability under different climatic scenarios. Our results indicated range contractions for *Cedrus deodara*, *Pinus roxburghii*, *Quercus lanata*, *Quercus semecarpifolia*, and *Rhododendron arboreum*; and an upward shift in distribution of *Lyonia ovalifolia*, *Mallotus philippensis*, and *Quercus leucotrichophora*. The elevation range of *Shorea robusta* and *Taxus wallichiana* can lean towards higher and lower elevations, respectively. The observed range dynamics raise concerns for the consequences of future ecosystem structure and functioning in the region. Our study will contribute to developing targeted management strategies to ensure the resilience of these dominant trees."
+
+event: 35th General Assembly of International Union of Biological Sciences (IUBS)
+
+all_day: false
+
+publishDate: "2026-06-13T00:00:00Z"
+
+authors:
+  - admin
+  - Meenu Patil
+  - Pardeep Kumar
+  - Anand Narain Singh
+
+tags:
+  - Biodiversity
+  - Climate change
+  - Elevational gradient
+  - Himalayas
+  - Species richness
+
+featured: false
+
+image:
+  caption: ''
+  focal_point: ''
+
+links:
+  - icon: certificate
+    icon_pack: fa
+    name: Certificate
+    url: "https://drive.google.com/file/d/1VBp9iuKAEkZOT2UxaVFxYW3XJv39RMM7/view?usp=drive_link"
+  - icon: twitter
+    icon_pack: fab
+    name: Follow
+    url: https://twitter.com/abkumar_
+
+url_code: ''
+url_pdf: ''
+url_slides: ''
+url_video: ''
+slides: ''
+
+projects: 
+  - plant-distribution
+---
