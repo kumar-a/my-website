@@ -11,10 +11,20 @@ date_format: 02 Jan 2006
 
 item:
 
+- certificate_url: "https://drive.google.com/file/d/1WOvask9zfgpG81LbOBmNkJuUlC-LqH7o/view?usp=sharing"
+  date_end: "2026-07-14"
+  date_start: "2026-07-07"
+  description: "This training introduced key concepts in species distribution modelling and provided example workflows in Google Earth Engine and JavaScript coding for spatial data analysis."
+  organization: NASA - ARSET
+  organization_url: "https://www.earthdata.nasa.gov/"
+  title: "Species Distribution Modeling with Google Earth Engine"
+  url: "https://www.earthdata.nasa.gov/learn/trainings/species-distribution-modeling-google-earth-engine"
+  
+
 - certificate_url: "https://drive.google.com/file/d/19e8C2pdVq8KxflLcXwY_spl-qWYqvSkq/view?usp=drive_link"
   date_end: "2026-02-26"
   date_start: "2026-02-24"
-  description: "This training covered the supervised and unsupervised classification models implemented in the R statistical environment. It also focused on visualisation of land cover land use change metrics and produce maps."
+  description: "This training covered the supervised and unsupervised classification models implemented in the `R` statistical environment. It also focused on visualisation of land cover land use change metrics and produce maps."
   organization: NASA - ARSET
   organization_url: "https://www.earthdata.nasa.gov/"
   title: "Visualizing Land Cover and Land Use Change with NASA Satellite Imagery"
