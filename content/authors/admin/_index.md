@@ -1,15 +1,17 @@
 ---
 title: Abhishek Kumar
 superuser: true
-role: Senior Research Fellow
+role: Project Associate II
 
 organizations:
   # - name: Panjab University, Chandigarh
   #   url: https://www.puchd.ac.in/
-  - name: ICAR–NBPGR, New Delhi
-    url: https://nbpgr.org.in/nbpgr2023/
+  # - name: ICAR–NBPGR, New Delhi
+  #   url: https://nbpgr.org.in/nbpgr2023/
+  - name: CSIR–NIScPR, New Delhi
+    url: "https://www.niscpr.res.in/"
   
-bio: My research interests include plant ecology, restoration ecology and soil ecology.  
+bio: My research interests include plant ecology, plant distribution and open science.  
 
 interests:
   - Plant ecology
@@ -66,4 +68,4 @@ social:
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
-I am working as a senior research fellow in the [National Mission for Sustaining Himalayan Ecosystem (NMSHE)](https://dst.gov.in/climate-change-programme) project at [ICAR–National Bureau of Plant Genetic Resources, New Delhi](https://nbpgr.org.in/nbpgr2023/). My research broadly focuses to understand the ecosystem structure and functions in the context of global environmental change. Guided by the values of collaboration, integrity, and open science, I aim to contribute meaningfully to ecological research and inform evidence-based management strategies.
+I am working as a Project Associate II at [CSIR–National Institute of Science Communication and Policy Research, New Delhi](https://www.niscpr.res.in/). My research broadly focuses to understand the ecosystem structure and functions in the context of global environmental change. Guided by the values of collaboration, integrity, and open science, I aim to contribute meaningfully to ecological research and inform evidence-based management strategies.

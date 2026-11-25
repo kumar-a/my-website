@@ -2,16 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://akumar.netlify.app/publication-type/2/</loc>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://akumar.netlify.app/</loc>
-    <lastmod>2026-07-10T11:30:00+00:00</lastmod>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://akumar.netlify.app/author/abhishek-kumar/</loc>
-    <lastmod>2026-07-10T11:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://akumar.netlify.app/author/anand-narain-singh/</loc>
-    <lastmod>2026-07-10T11:30:00+00:00</lastmod>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://akumar.netlify.app/authors/</loc>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://akumar.netlify.app/tag/biodiversity/</loc>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://akumar.netlify.app/tag/climate-change/</loc>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://akumar.netlify.app/tag/conservation/</loc>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://akumar.netlify.app/tag/himalayas/</loc>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://akumar.netlify.app/author/kamal-prasad-mohapatra/</loc>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://akumar.netlify.app/publication/2026-kumar-esi/</loc>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://akumar.netlify.app/publication_types/</loc>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://akumar.netlify.app/publication/</loc>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://akumar.netlify.app/author/puran-chandra/</loc>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://akumar.netlify.app/tags/</loc>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://akumar.netlify.app/author/anand-narain-singh/</loc>
     <lastmod>2026-07-10T11:30:00+00:00</lastmod>
   </url><url>
     <loc>https://akumar.netlify.app/tag/chail-wls/</loc>
@@ -26,9 +59,6 @@
     <loc>https://akumar.netlify.app/talk/2026-iwec/</loc>
     <lastmod>2026-07-10T11:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://akumar.netlify.app/tag/himalayas/</loc>
-    <lastmod>2026-07-10T11:30:00+00:00</lastmod>
-  </url><url>
     <loc>https://akumar.netlify.app/author/meenu-patil/</loc>
     <lastmod>2026-07-10T11:30:00+00:00</lastmod>
   </url><url>
@@ -41,17 +71,8 @@
     <loc>https://akumar.netlify.app/tag/species-richness/</loc>
     <lastmod>2026-07-10T11:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://akumar.netlify.app/tags/</loc>
-    <lastmod>2026-07-10T11:30:00+00:00</lastmod>
-  </url><url>
     <loc>https://akumar.netlify.app/tag/tropical-forest/</loc>
     <lastmod>2026-07-10T11:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://akumar.netlify.app/tag/biodiversity/</loc>
-    <lastmod>2026-06-12T15:15:00+00:00</lastmod>
-  </url><url>
-    <loc>https://akumar.netlify.app/tag/climate-change/</loc>
-    <lastmod>2026-06-12T15:15:00+00:00</lastmod>
   </url><url>
     <loc>https://akumar.netlify.app/talk/2026-iubs/</loc>
     <lastmod>2026-06-12T15:15:00+00:00</lastmod>
@@ -62,9 +83,6 @@
     <loc>https://akumar.netlify.app/author/pardeep-kumar/</loc>
     <lastmod>2026-06-12T15:15:00+00:00</lastmod>
   </url><url>
-    <loc>https://akumar.netlify.app/publication-type/2/</loc>
-    <lastmod>2026-06-02T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://akumar.netlify.app/publication/2026-cooper-mee/</loc>
     <lastmod>2026-06-02T00:00:00+00:00</lastmod>
   </url><url>
@@ -74,19 +92,10 @@
     <loc>https://akumar.netlify.app/tag/open-science/</loc>
     <lastmod>2026-06-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://akumar.netlify.app/publication_types/</loc>
-    <lastmod>2026-06-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://akumar.netlify.app/publication/</loc>
-    <lastmod>2026-06-02T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://akumar.netlify.app/author/the-bes-data-and-code-hackathon-group/</loc>
     <lastmod>2026-06-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://akumar.netlify.app/publication-type/6/</loc>
-    <lastmod>2026-01-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://akumar.netlify.app/tag/conservation/</loc>
     <lastmod>2026-01-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://akumar.netlify.app/author/sabir-hussain/</loc>

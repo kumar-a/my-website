@@ -23,13 +23,37 @@ date_format: Jan 2006
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 
 experience:
-  - title: Senior Research Fellow
+  - title: Project Associate II
+    company: CSIR-NIScPR
+    company_url: 'https://puchd.ac.in/'
+    company_logo: csir-logo
+    location: New Delhi, India
+    date_start: '2026-11-23'
+    date_end: ''
+    description: |2-
+        Responsibilities include:
+        * Traditional knowledge communication
+        * Supporting SVASTIK initiative
+        
+  - title: RUSA Post-Doctoral Fellow
+    company: Panjab University, Chandigarh
+    company_url: 'https://puchd.ac.in/'
+    company_logo: pu-logo
+    location: New Delhi, India
+    date_start: '2026-09-01'
+    date_end: '2026-11-20'
+    description: |2-
+        Responsibilities include:
+        * Species distribution modelling
+        * Preparing and publishing peer-reviewed publications
+        
+  - title: Project Associate II
     company: ICAR National Bureau of Plant Genetic Resources (NBPGR)
     company_url: 'https://nbpgr.org.in/nbpgr2023/'
     company_logo: nbpgr-logo
     location: New Delhi, India
     date_start: '2025-02-20'
-    date_end: ''
+    date_end: '2026-08-31'
     description: |2-
         Responsibilities include:
         * Species distribution modelling

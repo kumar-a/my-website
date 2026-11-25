@@ -23,16 +23,16 @@ twitter: 'https://x.com/abkumar_'
 email: abhikumar.pu@gmail.com
 phone: ''
 address:
-  street: Lab 17, NBPGR (Old Building)
-  city: Pusa Campus
+  street: Vigyan Suchna Bhawan
+  city: 14, Satsang Vihar Marg
   region: New Delhi
-  postcode: '110012'
+  postcode: '110067'
   country: India
   country_code: IN
 coordinates:
-  latitude: '28.630939386974283' ##'30.762255', 
-  longitude: '77.15395340327929' ##'76.767743'
-directions: Enter building, take the stairs to Lab 17 on First Floor
+  latitude:  '28.5418899' ##'30.762255', 
+  longitude: '77.1795170' ##'76.767743'
+directions: Enter building, take the stairs to SVASTIK Lab on First Floor
 office_hours:
   - 'Monday to Friday 10:00 to 17:00'
 appointment_url: ''
